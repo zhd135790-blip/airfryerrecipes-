@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoogleAdsense from '@/components/GoogleAdsense'
+import { LanguageProvider } from '@/contexts/LanguageContext'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -78,11 +79,13 @@ export default function RootLayout({
         <GoogleAdsense />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">
-        <Header />
-        <main className="flex-grow">
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <Header />
+          <main className="flex-grow">
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   )

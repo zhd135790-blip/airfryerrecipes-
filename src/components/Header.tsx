@@ -1,6 +1,14 @@
+'use client'
+
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
+import { useLanguage } from '@/contexts/LanguageContext'
+
+const LanguageSwitcher = dynamic(() => import('./LanguageSwitcher'), { ssr: false })
 
 export default function Header() {
+  const { t } = useLanguage()
+  
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
       <nav className="container py-4">
@@ -26,60 +34,58 @@ export default function Header() {
                 href="/recipes"
                 className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
               >
-                All Recipes
+                {t('nav.recipes')}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
               <Link
                 href="/categories"
                 className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
               >
-                Categories
+                {t('nav.categories')}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
               <Link
                 href="/calculator"
                 className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
               >
-                Calculator
+                {t('nav.calculator')}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
               <Link
                 href="/guides"
                 className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
               >
-                Guides
+                {t('nav.guides')}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
               <Link
                 href="/faq"
                 className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
               >
-                FAQ
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-              <Link
-                href="/guides/oven-to-air-fryer-conversion"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                Conversion Guide
+                {t('nav.faq')}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
               <Link
                 href="/about"
                 className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
               >
-                About
+                {t('nav.about')}
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
               </Link>
+              
+              {/* Language Switcher */}
+              <div className="ml-2">
+                <LanguageSwitcher />
+              </div>
             
-            {/* CTA Button */}
-            <Link 
-              href="/recipes"
-              className="ml-4 px-6 py-2.5 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-            >
-              Get Started
-            </Link>
-          </div>
+              {/* CTA Button */}
+              <Link 
+                href="/recipes"
+                className="ml-2 px-6 py-2.5 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+              >
+                {t('home.viewAll')}
+              </Link>
+            </div>
 
           {/* Mobile Menu Button */}
           <button className="md:hidden p-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">
