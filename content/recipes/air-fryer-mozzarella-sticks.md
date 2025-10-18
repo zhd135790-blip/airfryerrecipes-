@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Mozzarella Sticks - Easy Appetizer
 excerpt: Golden, crispy mozzarella sticks made in the air fryer with minimal oil. Perfect appetizer or snack ready in just 10 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-mozzarella-sticks.svg
 category: appetizers-and-snacks
 tags: [mozzarella-sticks, appetizer, kid-friendly, party-food, quick, cheese]
 prepTime: 15
@@ -58,5 +58,7 @@ nutritionFacts:
 ## Make Ahead
 
 Bread the mozzarella sticks and freeze for up to 1 month. Cook directly from frozen, adding 2-3 extra minutes.
+
+
 
 

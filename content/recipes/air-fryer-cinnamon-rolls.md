@@ -1,7 +1,7 @@
 ---
 title: Easy Air Fryer Cinnamon Rolls - Quick Breakfast Treat
 excerpt: Fluffy air fryer cinnamon rolls with cream cheese frosting. Quick and easy breakfast treat using store-bought dough!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-cinnamon-rolls.svg
 category: breakfast-and-brunch
 tags: [cinnamon-rolls, breakfast, pastries, quick, easy, sweet]
 prepTime: 10
@@ -108,5 +108,7 @@ Make from scratch using crescent roll dough:
 **Room Temperature:** 2 days covered
 **Refrigerator:** Up to 5 days
 **Reheat:** Air fryer at 300°F for 2-3 minutes
+
+
 
 

@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Coconut Shrimp - Restaurant-Style Appetizer
 excerpt: Crispy, golden coconut shrimp made in the air fryer with sweet chili dipping sauce. Restaurant-quality appetizer ready in 15 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-coconut-shrimp.svg
 category: seafood
 tags: [coconut-shrimp, seafood, appetizer, party-food, tropical, quick]
 prepTime: 15
@@ -81,5 +81,7 @@ nutritionFacts:
 ## Storage & Reheating
 
 Store leftovers in airtight container for up to 2 days. Reheat in air fryer at 350°F for 3-4 minutes to restore crispiness.
+
+
 
 

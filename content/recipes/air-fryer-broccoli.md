@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Broccoli Recipe - Crispy & Perfect
 excerpt: Learn how to make the best air fryer broccoli recipe! Crispy outside, tender inside broccoli ready in just 8 minutes. Healthy and delicious side dish.
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-broccoli.svg
 category: vegetables
 tags: [air-fryer-broccoli-recipe, broccoli, vegetables, healthy, easy, side-dish]
 prepTime: 5
@@ -57,4 +57,6 @@ nutritionFacts:
 ## Storage
 
 Cooked broccoli keeps in the fridge for up to 3 days. Reheat in air fryer at 350°F for 3-4 minutes.
+
+
 

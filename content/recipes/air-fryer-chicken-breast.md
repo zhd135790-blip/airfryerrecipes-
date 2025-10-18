@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Chicken Breast Recipe - Juicy & Tender
 excerpt: Perfect air fryer chicken breast recipe that's juicy inside and golden outside. Learn how to make the best chicken breast in air fryer in just 20 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-chicken-breast.svg
 category: meat-and-poultry
 tags: [air-fryer-chicken-breast-recipe, air-fryer-chicken-recipes, chicken-breast, healthy, easy, quick-meals]
 prepTime: 10
@@ -58,4 +58,6 @@ nutritionFacts:
 ## Storage
 
 Cooked chicken breast keeps in the fridge for up to 4 days. Reheat in air fryer at 350°F for 5-7 minutes.
+
+
 

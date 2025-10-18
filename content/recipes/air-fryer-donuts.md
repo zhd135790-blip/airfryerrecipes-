@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Donuts
 excerpt: Light and fluffy donuts made in your air fryer! No deep frying needed - these are healthier but just as delicious as traditional donuts.
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-donuts.svg
 category: desserts
 tags: [sweet, baking, kid-friendly, weekend-treat]
 prepTime: 15
@@ -54,4 +54,6 @@ nutritionFacts:
 ## Storage
 
 Best eaten fresh, but can be stored in an airtight container for 1-2 days.
+
+
 

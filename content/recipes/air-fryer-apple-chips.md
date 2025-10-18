@@ -1,7 +1,7 @@
 ---
 title: Healthy Air Fryer Apple Chips - Crispy & Sweet Snack
 excerpt: Crispy, sweet air fryer apple chips with cinnamon. Healthy snack with no added sugar, ready in 15 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-apple-chips.svg
 category: appetizers-and-snacks
 tags: [apple-chips, healthy-snack, vegan, gluten-free, kid-friendly, low-calorie]
 prepTime: 10
@@ -76,5 +76,7 @@ nutritionFacts:
 ## Storage
 
 Store in airtight container at room temperature for up to 5 days. If they lose crispiness, reheat in air fryer at 300°F for 2-3 minutes.
+
+
 
 

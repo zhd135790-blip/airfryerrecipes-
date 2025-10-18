@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Breakfast Burrito - Crispy & Delicious Morning Meal
 excerpt: Crispy air fryer breakfast burritos stuffed with eggs, cheese, and your favorite fillings. Perfect make-ahead breakfast ready in 10 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-breakfast-burrito.svg
 category: breakfast-and-brunch
 tags: [breakfast-burrito, breakfast, make-ahead, freezer-friendly, quick]
 prepTime: 15
@@ -76,5 +76,7 @@ nutritionFacts:
 - Home fries
 - Coffee or fresh juice
 - Yogurt parfait
+
+
 
 

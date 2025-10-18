@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Shrimp Recipe - Quick & Easy
 excerpt: Learn how to make the best air fryer shrimp recipe! Perfectly cooked shrimp that's juicy and flavorful. Ready in just 8 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-shrimp.svg
 category: seafood
 tags: [air-fryer-shrimp-recipes, shrimp, seafood, easy, quick-meals, healthy]
 prepTime: 10
@@ -58,4 +58,6 @@ nutritionFacts:
 ## Storage
 
 Cooked shrimp keeps in the fridge for up to 3 days. Reheat gently in air fryer at 350°F for 3-4 minutes.
+
+
 

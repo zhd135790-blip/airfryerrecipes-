@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Chicken Wings Recipe - Crispy & Easy
 excerpt: Best air fryer chicken wings recipe! Perfectly crispy chicken wings with no deep frying. These air fryer wings are juicy inside and crispy outside with minimal oil.
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/crispy-chicken-wings.svg
 category: appetizers-and-snacks
 tags: [air-fryer-chicken-wings-recipe, chicken-wings, air-fryer-wings-recipe, easy, quick-meals, party-food]
 prepTime: 10
@@ -51,5 +51,7 @@ These wings are perfect with:
 ## Storage
 
 Store leftover wings in an airtight container in the fridge for up to 3 days. Reheat in the air fryer at 350°F for 5-7 minutes.
+
+
 
 

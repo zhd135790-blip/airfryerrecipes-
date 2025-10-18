@@ -1,7 +1,7 @@
 ---
 title: Mini Air Fryer Cheesecake - Creamy & Delicious
 excerpt: Perfectly creamy mini air fryer cheesecakes that are rich and delicious. Individual portions make perfect dessert for any occasion!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-cheesecake.svg
 category: desserts
 tags: [cheesecake, dessert, special-occasion, individual-servings, make-ahead]
 prepTime: 15
@@ -91,5 +91,7 @@ Refrigerate covered for up to 5 days. Can also freeze for up to 2 months. Thaw i
 ## Make-Ahead
 
 Perfect for parties! Make 2-3 days ahead and store covered in refrigerator. Add toppings just before serving.
+
+
 
 

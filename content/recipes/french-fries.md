@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer French Fries
 excerpt: Golden, crispy French fries with 75% less oil than deep frying. These homemade fries are healthier and just as delicious!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/french-fries.svg
 category: appetizers-and-snacks
 tags: [easy, kid-friendly, comfort-food]
 prepTime: 20
@@ -53,5 +53,7 @@ Try these fries with:
 ## Storage and Reheating
 
 Store leftover fries in the fridge for up to 3 days. Reheat in the air fryer at 350°F for 5 minutes to restore crispiness.
+
+
 
 

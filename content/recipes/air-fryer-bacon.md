@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Bacon
 excerpt: Crispy, perfectly cooked bacon with no mess! Quick and easy air fryer bacon that's ready in minutes.
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-bacon.svg
 category: breakfast-and-brunch
 tags: [easy, quick-meals, keto-friendly, low-carb]
 prepTime: 2
@@ -42,4 +42,6 @@ nutritionFacts:
 ## Storage
 
 Cooked bacon keeps in the fridge for up to 4 days. Reheat in air fryer at 350°F for 2-3 minutes.
+
+
 

@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Roasted Vegetables
 excerpt: Colorful and healthy roasted vegetables made easy in the air fryer. Perfect as a side dish or light meal.
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/roasted-vegetables.svg
 category: vegetables
 tags: [healthy, vegan, gluten-free, quick-meals]
 prepTime: 15
@@ -57,5 +57,7 @@ Feel free to use any vegetables you like:
 ## Meal Prep Friendly
 
 These vegetables are perfect for meal prep! Store in airtight containers for up to 4 days and reheat in the air fryer for 3-4 minutes.
+
+
 
 

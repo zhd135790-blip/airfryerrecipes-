@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Chicken Tenders - Kid-Friendly Favorite
 excerpt: Perfectly crispy air fryer chicken tenders that kids and adults love. Healthier than fried with amazing crunch. Ready in 15 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-chicken-tenders.svg
 category: meat-and-poultry
 tags: [chicken-tenders, kid-friendly, quick-meals, easy, family-dinner]
 prepTime: 10
@@ -82,5 +82,7 @@ nutritionFacts:
 - Add to salads
 - Create chicken tender tacos
 - Pair with mac and cheese
+
+
 
 

@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Sweet Potato Fries - Healthy & Delicious
 excerpt: Perfectly crispy air fryer sweet potato fries with amazing flavor and 70% less oil. Healthy side dish ready in 20 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-sweet-potato-fries.svg
 category: vegetables
 tags: [sweet-potato, fries, healthy, vegan, gluten-free, side-dish]
 prepTime: 10
@@ -84,5 +84,7 @@ nutritionFacts:
 ## Storage Tips
 
 Best eaten immediately, but leftovers can be stored for 3 days. Reheat in air fryer at 375°F for 5-7 minutes.
+
+
 
 

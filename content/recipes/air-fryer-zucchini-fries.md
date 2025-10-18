@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Zucchini Fries - Healthy Low-Carb Snack
 excerpt: Crispy air fryer zucchini fries that are healthy, low-carb, and delicious. Perfect veggie side dish or snack ready in 15 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-zucchini-fries.svg
 category: vegetables
 tags: [zucchini, low-carb, healthy, vegetarian, side-dish, keto-friendly]
 prepTime: 10
@@ -86,5 +86,7 @@ For keto/low-carb version:
 ## Storage & Reheating
 
 Best eaten immediately, but can store leftovers for 1-2 days. Reheat in air fryer at 375°F for 5 minutes to restore some crispiness.
+
+
 
 

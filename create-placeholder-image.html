@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Placeholder</title>
+</head>
+<body>
+    <canvas id="canvas" width="1200" height="800"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Gradient background
+        const gradient = ctx.createLinearGradient(0, 0, 1200, 800);
+        gradient.addColorStop(0, '#ff6b35');
+        gradient.addColorStop(1, '#f7931e');
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, 1200, 800);
+        
+        // Text
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 72px Arial';
+        ctx.textAlign = 'center';
+        ctx.fillText('Air Fryer Recipe', 600, 350);
+        
+        ctx.font = '48px Arial';
+        ctx.fillText('🍳', 600, 450);
+        
+        ctx.font = '24px Arial';
+        ctx.fillText('Image Coming Soon', 600, 520);
+        
+        // Download
+        canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'placeholder-recipe.jpg';
+            a.click();
+        }, 'image/jpeg', 0.95);
+    </script>
+</body>
+</html>
+

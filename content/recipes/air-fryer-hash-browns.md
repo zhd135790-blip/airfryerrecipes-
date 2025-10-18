@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Hash Browns - Perfect Breakfast Side
 excerpt: Extra crispy air fryer hash browns that are golden and delicious. Perfect breakfast side dish ready in 20 minutes with minimal oil!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-hash-browns.svg
 category: breakfast-and-brunch
 tags: [hash-browns, breakfast, side-dish, easy, vegetarian, gluten-free]
 prepTime: 10
@@ -86,5 +86,7 @@ Store leftovers in refrigerator for up to 3 days. Reheat in air fryer at 375°F 
 ## Make-Ahead Tip
 
 Grate potatoes the night before, soak in cold water in refrigerator. Drain and squeeze dry before cooking.
+
+
 
 

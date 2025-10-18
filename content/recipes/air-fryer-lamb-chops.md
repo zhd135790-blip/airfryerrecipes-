@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Lamb Chops - Restaurant-Quality Dinner
 excerpt: Perfectly cooked air fryer lamb chops with garlic herb crust. Elegant dinner ready in just 15 minutes with restaurant-quality results!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-lamb-chops.svg
 category: meat-and-poultry
 tags: [lamb-chops, dinner, elegant, date-night, special-occasion, low-carb]
 prepTime: 10
@@ -100,5 +100,7 @@ nutritionFacts:
 - Merlot
 - Shiraz
 - Pinot Noir
+
+
 
 

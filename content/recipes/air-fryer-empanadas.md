@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Empanadas - Latin American Favorite
 excerpt: Crispy, golden air fryer empanadas filled with seasoned beef and vegetables. Authentic Latin American pastries with 75% less oil!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-empanadas.svg
 category: appetizers-and-snacks
 tags: [empanadas, latin-american, appetizer, party-food, make-ahead]
 prepTime: 30
@@ -110,5 +110,7 @@ Blend together:
 - Main course with salad
 - Party platter with different fillings
 - Pack for lunch or picnics
+
+
 
 

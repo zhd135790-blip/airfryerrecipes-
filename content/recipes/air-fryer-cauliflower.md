@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Cauliflower Recipe - Crispy & Delicious
 excerpt: Learn how to make the best air fryer cauliflower recipe! Perfectly crispy cauliflower that's tender inside. Easy and healthy vegetable side dish.
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-cauliflower.svg
 category: vegetables
 tags: [air-fryer-cauliflower-recipes, cauliflower, vegetables, healthy, easy, side-dish]
 prepTime: 10
@@ -57,4 +57,6 @@ nutritionFacts:
 ## Storage
 
 Cooked cauliflower keeps in the fridge for up to 4 days. Reheat in air fryer at 350°F for 5-7 minutes.
+
+
 

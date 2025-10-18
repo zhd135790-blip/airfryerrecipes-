@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Falafel - Healthy Middle Eastern Favorite
 excerpt: Crispy air fryer falafel made with chickpeas and fresh herbs. Healthy, vegan, and delicious with only 1 tablespoon of oil!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-falafel.svg
 category: vegan
 tags: [falafel, vegan, vegetarian, healthy, middle-eastern, gluten-free]
 prepTime: 15
@@ -91,5 +91,7 @@ Mix together:
 **Refrigerate:** Up to 5 days in airtight container
 **Freeze:** Up to 3 months
 **Reheat:** Air fryer at 350°F for 5-7 minutes
+
+
 
 

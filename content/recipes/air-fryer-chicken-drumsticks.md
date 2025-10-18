@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Chicken Drumsticks - Budget-Friendly Dinner
 excerpt: Juicy air fryer chicken drumsticks with extra crispy skin. Budget-friendly family dinner ready in 25 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-chicken-drumsticks.svg
 category: meat-and-poultry
 tags: [chicken-drumsticks, budget-friendly, family-dinner, easy, kid-friendly]
 prepTime: 10
@@ -109,5 +109,7 @@ Always check internal temperature!
 **Refrigerate:** Up to 4 days
 **Freeze:** Up to 3 months
 **Reheat:** Air fryer at 375°F for 8-10 minutes
+
+
 
 

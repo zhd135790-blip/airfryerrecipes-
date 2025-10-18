@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Salmon Recipe - Crispy & Perfect
 excerpt: Learn how to make the best air fryer salmon recipe! Perfectly cooked salmon with crispy skin and tender, flaky flesh. A healthy dinner ready in just 12 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/crispy-salmon.svg
 category: seafood
 tags: [salmon-air-fryer-recipe, air-fryer-salmon-recipe, salmon, healthy, quick-meals, omega-3, gluten-free]
 prepTime: 5
@@ -50,4 +50,6 @@ nutritionFacts:
 ## Storage
 
 Cooked salmon keeps in the fridge for up to 3 days. Reheat gently in the air fryer at 350°F for 3-4 minutes.
+
+
 

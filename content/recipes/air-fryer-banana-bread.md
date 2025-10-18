@@ -1,7 +1,7 @@
 ---
 title: Moist Air Fryer Banana Bread - Easy Quick Bread
 excerpt: Perfectly moist air fryer banana bread made in mini loaf pan. No oven needed for this delicious quick bread using ripe bananas!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-banana-bread.svg
 category: desserts
 tags: [banana-bread, dessert, breakfast, baking, quick-bread]
 prepTime: 10
@@ -103,5 +103,7 @@ nutritionFacts:
 - Warm with ice cream
 - Drizzle with caramel
 - Top with whipped cream
+
+
 
 

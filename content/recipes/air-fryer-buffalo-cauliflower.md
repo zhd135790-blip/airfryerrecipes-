@@ -1,7 +1,7 @@
 ---
 title: Spicy Air Fryer Buffalo Cauliflower - Vegan Wing Alternative
 excerpt: Crispy air fryer buffalo cauliflower that's the perfect vegan wing alternative. Spicy, tangy, and addictively delicious!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-buffalo-cauliflower.svg
 category: vegan
 tags: [buffalo-cauliflower, vegan, appetizer, spicy, party-food, low-carb]
 prepTime: 15
@@ -102,5 +102,7 @@ nutritionFacts:
 ## Storage
 
 Store in refrigerator for up to 3 days. Reheat in air fryer at 375°F for 5-7 minutes. Not recommended for freezing as cauliflower can become watery.
+
+
 
 

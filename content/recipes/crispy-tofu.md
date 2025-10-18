@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Tofu
 excerpt: Perfectly crispy tofu that's golden on the outside and tender inside. A protein-packed vegan option that even meat lovers will enjoy!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/crispy-tofu.svg
 category: vegan
 tags: [vegan, protein, healthy, gluten-free, dairy-free]
 prepTime: 10
@@ -53,4 +53,6 @@ nutritionFacts:
 - **Teriyaki**: Use teriyaki sauce instead of soy sauce
 - **Buffalo**: Toss with buffalo sauce after cooking
 - **BBQ**: Use BBQ seasoning and sauce
+
+
 

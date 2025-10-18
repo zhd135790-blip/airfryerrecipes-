@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Fish Tacos - Crispy & Healthy Mexican Favorite
 excerpt: Crispy air fryer fish tacos with flaky white fish, crunchy cabbage slaw, and zesty lime crema. Healthy and delicious in just 20 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-fish-tacos.svg
 category: seafood
 tags: [fish-tacos, mexican, seafood, healthy, quick-meals, easy]
 prepTime: 15
@@ -82,5 +82,7 @@ nutritionFacts:
 - Corn salad
 - Chips and guacamole
 - Elote (Mexican street corn)
+
+
 
 

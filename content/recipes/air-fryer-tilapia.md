@@ -1,7 +1,7 @@
 ---
 title: Easy Air Fryer Tilapia - Quick & Healthy Fish Dinner
 excerpt: Perfectly flaky air fryer tilapia that's healthy and delicious. Quick weeknight dinner ready in just 10 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-tilapia.svg
 category: seafood
 tags: [tilapia, fish, healthy, quick-meals, low-carb, easy-dinner]
 prepTime: 5
@@ -102,5 +102,7 @@ Cook multiple fillets and refrigerate for up to 3 days. Use in:
 - Salads
 - Grain bowls
 - Sandwiches
+
+
 
 

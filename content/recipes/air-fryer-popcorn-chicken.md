@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Popcorn Chicken - Kid-Friendly Favorite
 excerpt: Bite-sized crispy air fryer popcorn chicken that's perfect for kids and adults. Healthier than fast food and ready in 15 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-popcorn-chicken.svg
 category: meat-and-poultry
 tags: [popcorn-chicken, kid-friendly, snack, party-food, quick-meals]
 prepTime: 15
@@ -108,5 +108,7 @@ Set up variety of sauces:
 ## Make-Ahead
 
 Bread chicken pieces and freeze on baking sheet. Once frozen, transfer to freezer bags. Cook from frozen, adding 3-5 minutes to cooking time.
+
+
 
 

@@ -1,7 +1,7 @@
 ---
 title: Healthy Air Fryer Turkey Meatballs - Lean & Flavorful
 excerpt: Juicy air fryer turkey meatballs that are healthy, lean, and packed with flavor. Perfect for meal prep, pasta, or sandwiches!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-turkey-meatballs.svg
 category: meat-and-poultry
 tags: [turkey-meatballs, healthy, meal-prep, lean-protein, family-friendly]
 prepTime: 15
@@ -91,5 +91,7 @@ Make large batch and:
 - **Refrigerate:** Up to 4 days
 - **Freeze:** Up to 3 months
 - **Reheat:** Air fryer at 350°F for 5-7 minutes
+
+
 
 

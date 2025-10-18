@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Corn on the Cob - Sweet & Tender
 excerpt: Perfectly cooked air fryer corn on the cob that's sweet, tender, and delicious. Ready in just 12 minutes with optional flavor variations!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: /images/recipes/air-fryer-corn-on-the-cob.svg
 category: vegetables
 tags: [corn, side-dish, summer, easy, vegan, gluten-free]
 prepTime: 5
@@ -86,5 +86,7 @@ After cooking, brush corn with:
 ## Storage
 
 Store cooked corn in refrigerator for up to 3 days. Reheat in air fryer at 350°F for 3-4 minutes. Can also cut kernels off cob for salads and other dishes.
+
+
 
 
