@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食谱图片快速下载工具</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 { 
+            color: white;
+            text-align: center;
+            font-size: 3em;
+            margin: 30px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .instructions { 
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            margin: 30px 0;
+        }
+        .instructions h3 { 
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        .instructions ol { 
+            margin-left: 20px;
+            line-height: 1.8;
+        }
+        .instructions li { 
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+        .instructions code { 
+            background: #f5f5f5;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'Consolas', monospace;
+            color: #d63384;
+        }
+        .category { 
+            background: white;
+            margin: 25px 0;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        .category:hover {
+            transform: translateY(-5px);
+        }
+        .category h2 { 
+            color: #ff6b35;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 10px;
+        }
+        .recipe { 
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            background: #f8f9fa;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .recipe:hover {
+            background: #e9ecef;
+            border-left-width: 6px;
+        }
+        .recipe-name { 
+            font-weight: bold;
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .recipe-filename { 
+            color: #666;
+            font-family: 'Consolas', monospace;
+            margin: 8px 0;
+            background: white;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+        .links { 
+            margin: 15px 0;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .links a { 
+            display: inline-block;
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        .links a:hover { 
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        .links a:nth-child(2) {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+        .priority {
+            display: inline-block;
+            background: #ffc107;
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-left: 10px;
+        }
+        .stats {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 20px 0;
+            backdrop-filter: blur(10px);
+        }
+        .stats h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            .category h2 { font-size: 1.4em; }
+            .links { flex-direction: column; }
+            .links a { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🍳 空气炸锅食谱图片下载工具</h1>
+        
+        <div class="stats">
+            <h3>📊 总共需要下载 42 张图片</h3>
+            <p>建议图片尺寸：1200×800像素 | 格式：JPG | 大小：&lt;500KB</p>
+        </div>
+        
+        <div class="instructions">
+            <h3>📝 使用说明</h3>
+            <ol>
+                <li>点击下方任意 <strong>"花瓣网搜索"</strong> 或 <strong>"Pixabay搜索"</strong> 按钮打开搜索页面</li>
+                <li>在打开的网页中选择一张<strong>清晰美观</strong>的食物图片</li>
+                <li>右键保存图片，重命名为显示的<code>文件名</code></li>
+                <li>保存到项目的 <code>public/images/recipes/</code> 目录</li>
+                <li>完成所有42张图片的下载（或先下载优先级高的10张）</li>
+            </ol>
+            <p style="margin-top:15px;"><strong>💡 小技巧</strong>: 按住 <kbd>Ctrl</kbd> 点击按钮可以在新标签页打开，方便批量下载</p>
+        </div>
+        
+        <div class="category">
+            <h2>🍗 鸡肉类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅鸡胸肉 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-chicken-breast.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=鸡胸肉" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/grilled+chicken+breast" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅鸡腿</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-chicken-drumsticks.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=炸鸡腿" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/fried+chicken+legs" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅鸡柳</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-chicken-tenders.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=鸡柳" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/chicken+tenders" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅爆米花鸡</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-popcorn-chicken.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=爆米花鸡" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/popcorn+chicken" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">香脆鸡翅 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: crispy-chicken-wings.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=鸡翅" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/chicken+wings" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🥩 猪肉类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅猪排</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-pork-chops.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=猪排" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/pork+chops" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅培根 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-bacon.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=培根" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/bacon" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🥩 牛肉/羊肉</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅牛排 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-steak.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=牛排" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/steak" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅羊排</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-lamb-chops.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=羊排" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/lamb+chops" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🐟 海鲜类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅虾 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-shrimp.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=炸虾" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/fried+shrimp" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅鱼肉卷</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-fish-tacos.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=鱼肉卷" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/fish+tacos" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅椰子虾</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-coconut-shrimp.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=椰子虾" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/coconut+shrimp" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅蟹饼</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-crab-cakes.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=蟹饼" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/crab+cakes" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅罗非鱼</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-tilapia.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=烤鱼" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/grilled+fish" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">香脆三文鱼 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: crispy-salmon.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=三文鱼" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/salmon" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🥦 蔬菜类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅西兰花</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-broccoli.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=西兰花" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/roasted+broccoli" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅抱子甘蓝</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-brussels-sprouts.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=抱子甘蓝" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/brussels+sprouts" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅花菜</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-cauliflower.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=花菜" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/cauliflower" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">香辣花菜</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-buffalo-cauliflower.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=香辣花菜" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/buffalo+cauliflower" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅玉米</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-corn-on-the-cob.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=烤玉米" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/grilled+corn" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">烤蔬菜</div>
+                <div class="recipe-filename">📁 文件名: roasted-vegetables.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=烤蔬菜" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/roasted+vegetables" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🥔 土豆类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">空气炸锅烤土豆</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-baked-potato.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=烤土豆" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/baked+potato" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">法式薯条 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: french-fries.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=薯条" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/french+fries" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">红薯条</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-sweet-potato-fries.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=红薯条" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/sweet+potato+fries" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">薯饼</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-hash-browns.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=薯饼" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/hash+browns" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🧀 小吃类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">芝士条 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-mozzarella-sticks.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=芝士条" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/mozzarella+sticks" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">洋葱圈 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-onion-rings.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=洋葱圈" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/onion+rings" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">春卷</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-egg-rolls.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=春卷" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/spring+rolls" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">披萨卷</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-pizza-rolls.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=披萨卷" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/pizza+rolls" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">肉馅饼</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-empanadas.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=肉馅饼" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/empanadas" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">西葫芦条</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-zucchini-fries.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=西葫芦条" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/zucchini+fries" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🌯 早餐类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">早餐卷饼</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-breakfast-burrito.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=早餐卷饼" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/breakfast+burrito" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">肉桂卷</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-cinnamon-rolls.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=肉桂卷" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/cinnamon+rolls" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">甜甜圈</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-donuts.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=甜甜圈" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/donuts" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🍰 甜点类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">巧克力曲奇 <span class="priority">⭐ 优先</span></div>
+                <div class="recipe-filename">📁 文件名: air-fryer-chocolate-chip-cookies.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=巧克力曲奇" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/chocolate+chip+cookies" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">芝士蛋糕</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-cheesecake.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=芝士蛋糕" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/cheesecake" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">香蕉面包</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-banana-bread.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=香蕉面包" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/banana+bread" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🌱 素食类</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">中东炸豆丸</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-falafel.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=炸豆丸" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/falafel" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">香脆豆腐</div>
+                <div class="recipe-filename">📁 文件名: crispy-tofu.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=炸豆腐" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/crispy+tofu" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="category">
+            <h2>🫑 其他</h2>
+            
+            <div class="recipe">
+                <div class="recipe-name">酿甜椒</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-stuffed-peppers.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=酿甜椒" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/stuffed+peppers" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">火鸡肉丸</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-turkey-meatballs.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=肉丸" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/turkey+meatballs" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+            
+            <div class="recipe">
+                <div class="recipe-name">苹果脆片</div>
+                <div class="recipe-filename">📁 文件名: air-fryer-apple-chips.jpg</div>
+                <div class="links">
+                    <a href="https://huaban.com/search/?q=苹果脆片" target="_blank">🌸 花瓣网搜索</a>
+                    <a href="https://pixabay.com/images/search/apple+chips" target="_blank">🖼️ Pixabay搜索</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="instructions" style="margin-top:40px;">
+            <h3>🎯 下载完成后</h3>
+            <ol>
+                <li>确保所有图片都保存在 <code>public/images/recipes/</code> 目录</li>
+                <li>图片文件名必须<strong>完全匹配</strong>上方显示的名称</li>
+                <li>建议使用 <a href="https://tinypng.com/" target="_blank" style="color:#667eea;">TinyPNG</a> 压缩图片到500KB以下</li>
+                <li>完成后运行 <code>npm run dev</code> 启动项目查看效果</li>
+            </ol>
+        </div>
+        
+        <div style="text-align:center; color:white; margin:40px 0; font-size:1.2em;">
+            <p>💡 <strong>小贴士</strong>: 带 <span style="background:#ffc107;color:#000;padding:4px 12px;border-radius:20px;">⭐ 优先</span> 标记的是最重要的10个食谱</p>
+            <p style="margin-top:15px;">可以先下载这10张，其余慢慢补充</p>
+        </div>
+        
+        <div style="text-align:center; color:white; margin:40px 0 60px 0; font-size:1.5em;">
+            <p>🎉 祝你下载顺利！</p>
+        </div>
+    </div>
+</body>
+</html>
+

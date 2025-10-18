@@ -7,7 +7,8 @@ interface RecipeCardProps {
 }
 
 export default function RecipeCard({ recipe }: RecipeCardProps) {
-  const imageUrl = recipe.mainImage || '/images/placeholder-recipe.jpg'
+  // Add timestamp to bypass cache
+  const imageUrl = recipe.mainImage ? `${recipe.mainImage}?v=${Date.now()}` : '/images/placeholder-recipe.jpg'
   const totalTime = recipe.prepTime + recipe.cookTime
   
   const difficultyColors = {
