@@ -1,7 +1,7 @@
 ---
 title: Juicy Air Fryer Pork Chops - Tender & Flavorful
 excerpt: Perfectly cooked air fryer pork chops that are juicy inside with a golden crust. Ready in just 15 minutes with simple seasonings!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1625944525533-473f1a3d54e7?w=800&h=600&fit=crop
 category: meat-and-poultry
 tags: [pork-chops, dinner, easy, quick-meals, low-carb, keto-friendly]
 prepTime: 5

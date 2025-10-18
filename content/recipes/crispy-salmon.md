@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Salmon Recipe - Crispy & Perfect
 excerpt: Learn how to make the best air fryer salmon recipe! Perfectly cooked salmon with crispy skin and tender, flaky flesh. A healthy dinner ready in just 12 minutes!
-mainImage: /images/recipes/crispy-salmon.svg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: seafood
 tags: [salmon-air-fryer-recipe, air-fryer-salmon-recipe, salmon, healthy, quick-meals, omega-3, gluten-free]
 prepTime: 5

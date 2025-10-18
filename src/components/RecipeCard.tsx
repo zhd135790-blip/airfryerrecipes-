@@ -1,14 +1,42 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Recipe } from '@/lib/recipes'
+
+interface Recipe {
+  _id: string
+  slug: string
+  title: string
+  excerpt: string
+  mainImage: string
+  prepTime: number
+  cookTime: number
+  servings: number
+  difficulty: 'easy' | 'medium' | 'hard'
+  category: string
+  tags: string[]
+  ingredients: string[]
+  instructions: string[]
+  nutritionFacts?: {
+    calories: number
+    protein: number
+    carbs: number
+    fat: number
+  }
+  seoTitle?: string
+  seoDescription?: string
+  content?: string
+  date: string
+}
 
 interface RecipeCardProps {
   recipe: Recipe
 }
 
 export default function RecipeCard({ recipe }: RecipeCardProps) {
-  // Add timestamp to bypass cache
-  const imageUrl = recipe.mainImage ? `${recipe.mainImage}?v=${Date.now()}` : '/images/placeholder-recipe.jpg'
+  // Add cache busting parameter to force image refresh
+  const baseImageUrl = recipe.mainImage || '/images/placeholder-recipe.jpg'
+  const imageUrl = baseImageUrl.includes('unsplash.com') 
+    ? `${baseImageUrl}&v=${Date.now()}` 
+    : baseImageUrl
   const totalTime = recipe.prepTime + recipe.cookTime
   
   const difficultyColors = {

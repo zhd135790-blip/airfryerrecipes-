@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Tofu
 excerpt: Perfectly crispy tofu that's golden on the outside and tender inside. A protein-packed vegan option that even meat lovers will enjoy!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: vegan
 tags: [vegan, protein, healthy, gluten-free, dairy-free]
 prepTime: 10

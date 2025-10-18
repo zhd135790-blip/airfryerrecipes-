@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Roasted Vegetables
 excerpt: Colorful and healthy roasted vegetables made easy in the air fryer. Perfect as a side dish or light meal.
-mainImage: /images/recipes/roasted-vegetables.svg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: vegetables
 tags: [healthy, vegan, gluten-free, quick-meals]
 prepTime: 15

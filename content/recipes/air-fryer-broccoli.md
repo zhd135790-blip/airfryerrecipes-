@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Broccoli Recipe - Crispy & Perfect
 excerpt: Learn how to make the best air fryer broccoli recipe! Crispy outside, tender inside broccoli ready in just 8 minutes. Healthy and delicious side dish.
-mainImage: /images/recipes/air-fryer-broccoli.svg
+mainImage: https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=800&h=600&fit=crop
 category: vegetables
 tags: [air-fryer-broccoli-recipe, broccoli, vegetables, healthy, easy, side-dish]
 prepTime: 5

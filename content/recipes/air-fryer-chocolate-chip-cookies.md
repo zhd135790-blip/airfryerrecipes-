@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Chocolate Chip Cookies - Soft & Chewy
 excerpt: Perfectly soft and chewy air fryer chocolate chip cookies ready in just 8 minutes! Small batch recipe perfect for quick dessert cravings.
-mainImage: /images/recipes/air-fryer-chocolate-chip-cookies.svg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: desserts
 tags: [cookies, chocolate-chip, dessert, quick, easy, small-batch]
 prepTime: 10

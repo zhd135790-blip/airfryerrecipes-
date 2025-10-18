@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Chicken Breast Recipe - Juicy & Tender
 excerpt: Perfect air fryer chicken breast recipe that's juicy inside and golden outside. Learn how to make the best chicken breast in air fryer in just 20 minutes!
-mainImage: /images/recipes/air-fryer-chicken-breast.svg
+mainImage: https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&h=600&fit=crop
 category: meat-and-poultry
 tags: [air-fryer-chicken-breast-recipe, air-fryer-chicken-recipes, chicken-breast, healthy, easy, quick-meals]
 prepTime: 10

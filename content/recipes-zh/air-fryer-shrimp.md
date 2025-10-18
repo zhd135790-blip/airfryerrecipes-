@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Shrimp Recipe - Quick & Easy
 excerpt: Learn how to make the best air fryer shrimp recipe! Perfectly cooked shrimp that's juicy and flavorful. Ready in just 8 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1565680018434-b513d5e5fd47?w=800&h=600&fit=crop
 category: seafood
 tags: [air-fryer-shrimp-recipes, shrimp, seafood, easy, quick-meals, healthy]
 prepTime: 10

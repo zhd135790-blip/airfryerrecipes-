@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Steak - Juicy & Restaurant-Quality
 excerpt: Cook the perfect air fryer steak with a beautiful crust and juicy center. Restaurant-quality results in just 12 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: meat-and-poultry
 tags: [steak, beef, dinner, date-night, quick-meals, low-carb, keto]
 prepTime: 5

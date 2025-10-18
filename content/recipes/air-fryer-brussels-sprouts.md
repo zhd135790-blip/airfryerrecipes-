@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Brussels Sprouts - Healthy Side Dish
 excerpt: Perfectly crispy air fryer Brussels sprouts with caramelized edges. This easy, healthy side dish is ready in just 15 minutes!
-mainImage: /images/recipes/air-fryer-brussels-sprouts.svg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: vegetables
 tags: [brussels-sprouts, vegetables, healthy, vegan, side-dish, low-carb]
 prepTime: 10

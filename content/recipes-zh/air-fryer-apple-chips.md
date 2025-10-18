@@ -1,7 +1,7 @@
 ---
 title: Healthy Air Fryer Apple Chips - Crispy & Sweet Snack
 excerpt: Crispy, sweet air fryer apple chips with cinnamon. Healthy snack with no added sugar, ready in 15 minutes!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=600&fit=crop&q=80
 category: appetizers-and-snacks
 tags: [apple-chips, healthy-snack, vegan, gluten-free, kid-friendly, low-calorie]
 prepTime: 10

@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Bacon
 excerpt: Crispy, perfectly cooked bacon with no mess! Quick and easy air fryer bacon that's ready in minutes.
-mainImage: /images/recipes/air-fryer-bacon.svg
+mainImage: https://images.unsplash.com/photo-1528607929212-2636ec44253e?w=800&h=600&fit=crop
 category: breakfast-and-brunch
 tags: [easy, quick-meals, keto-friendly, low-carb]
 prepTime: 2

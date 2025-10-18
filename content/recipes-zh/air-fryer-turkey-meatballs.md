@@ -1,7 +1,7 @@
 ---
 title: Healthy Air Fryer Turkey Meatballs - Lean & Flavorful
 excerpt: Juicy air fryer turkey meatballs that are healthy, lean, and packed with flavor. Perfect for meal prep, pasta, or sandwiches!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: meat-and-poultry
 tags: [turkey-meatballs, healthy, meal-prep, lean-protein, family-friendly]
 prepTime: 15

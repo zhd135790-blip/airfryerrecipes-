@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Baked Potato - Crispy Skin & Fluffy Inside
 excerpt: Perfectly cooked air fryer baked potato with crispy skin and fluffy interior. Ready in just 35 minutes - faster than oven!
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: vegetables
 tags: [baked-potato, side-dish, easy, vegan, gluten-free, comfort-food]
 prepTime: 5

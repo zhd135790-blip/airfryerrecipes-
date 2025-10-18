@@ -1,7 +1,7 @@
 ---
 title: 空气炸锅鸡胸肉 - 多汁嫩滑
 excerpt: 完美的空气炸锅鸡胸肉食谱，内部多汁，外部金黄。仅需20分钟即可制作出最好的空气炸锅鸡胸肉！
-mainImage: /images/placeholder-recipe.jpg
+mainImage: https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&h=600&fit=crop
 category: meat-and-poultry
 tags: [空气炸锅鸡胸肉食谱, 空气炸锅鸡肉食谱, 鸡胸肉, 健康, 简单, 快手菜]
 prepTime: 10

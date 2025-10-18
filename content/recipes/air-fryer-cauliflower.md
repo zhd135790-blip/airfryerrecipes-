@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Cauliflower Recipe - Crispy & Delicious
 excerpt: Learn how to make the best air fryer cauliflower recipe! Perfectly crispy cauliflower that's tender inside. Easy and healthy vegetable side dish.
-mainImage: /images/recipes/air-fryer-cauliflower.svg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: vegetables
 tags: [air-fryer-cauliflower-recipes, cauliflower, vegetables, healthy, easy, side-dish]
 prepTime: 10

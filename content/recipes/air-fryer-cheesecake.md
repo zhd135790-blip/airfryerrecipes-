@@ -1,7 +1,7 @@
 ---
 title: Mini Air Fryer Cheesecake - Creamy & Delicious
 excerpt: Perfectly creamy mini air fryer cheesecakes that are rich and delicious. Individual portions make perfect dessert for any occasion!
-mainImage: /images/recipes/air-fryer-cheesecake.svg
+mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
 category: desserts
 tags: [cheesecake, dessert, special-occasion, individual-servings, make-ahead]
 prepTime: 15
