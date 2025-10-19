@@ -120,9 +120,7 @@ const translations = {
     'recipes.successRate': 'Success Rate',
     'recipes.avgTime': 'Avg. Time',
     'recipes.cantFind': "Can't Find What You're Looking For?",
-    'recipes.cantFindDesc': "We're constantly adding new recipes! Subscribe to get the latest air fryer recipes delivered to your inbox.",
-    'recipes.enterEmail': 'Enter your email',
-    'recipes.subscribeFree': 'Subscribe Free',
+    'recipes.cantFindDesc': "We're constantly adding new recipes! Check back regularly for the latest air fryer recipes.",
   },
   zh: {
     // Header
@@ -230,9 +228,7 @@ const translations = {
     'recipes.successRate': '成功率',
     'recipes.avgTime': '平均时间',
     'recipes.cantFind': '找不到您要找的内容？',
-    'recipes.cantFindDesc': '我们不断添加新食谱！订阅以获取最新的空气炸锅食谱发送到您的收件箱。',
-    'recipes.enterEmail': '输入您的邮箱',
-    'recipes.subscribeFree': '免费订阅',
+    'recipes.cantFindDesc': '我们不断添加新食谱！请定期查看最新的空气炸锅食谱。',
   },
 }
 

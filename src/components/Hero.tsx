@@ -26,20 +26,22 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto text-center">
           {/* 标签 */}
           <div className="inline-flex items-center gap-2 px-6 py-3 bg-white/90 backdrop-blur-md rounded-full shadow-lg mb-8 border border-white/20 animate-float">
-            <span className="text-2xl animate-pulse">🍳</span>
-            <span className="text-sm font-bold text-gray-800">100% Healthy Cooking</span>
+            <svg className="w-5 h-5 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+            </svg>
+            <span className="text-sm font-bold text-gray-800">Kitchen-Tested Recipes</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold mb-8 leading-tight">
-            <span className="block text-white drop-shadow-2xl animate-float" style={{animationDelay: '0.5s'}}>Delicious Air Fryer</span>
+            <span className="block text-white drop-shadow-2xl animate-float" style={{animationDelay: '0.5s'}}>Air Fryer Recipes</span>
             <span className="block mt-2 bg-gradient-to-r from-yellow-200 via-white to-yellow-200 bg-clip-text text-transparent drop-shadow-lg animate-float" style={{animationDelay: '1s'}}>
-              Recipes Made Easy
+              That Actually Work
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl lg:text-3xl text-white/95 mb-12 max-w-4xl mx-auto leading-relaxed font-medium drop-shadow-lg">
-            Transform your meals with healthier, crispier, and faster cooking. 
-            <span className="font-bold text-yellow-100 drop-shadow-md"> Over 200 tested recipes</span> waiting for you.
+            Stop wasting time on recipes that don't deliver. Our kitchen-tested air fryer recipes give you 
+            <span className="font-bold text-yellow-100 drop-shadow-md"> crispy, flavorful results every time</span>.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
@@ -66,11 +68,11 @@ export default function Hero() {
           {/* 统计数据 */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             <div className="bg-white/85 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white/30">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">7+</div>
-              <div className="text-gray-800 font-bold text-lg">Recipes</div>
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">50+</div>
+              <div className="text-gray-800 font-bold text-lg">Tested Recipes</div>
             </div>
             <div className="bg-white/85 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white/30">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">9</div>
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">8</div>
               <div className="text-gray-800 font-bold text-lg">Categories</div>
             </div>
             <div className="bg-white/85 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white/30">
@@ -78,8 +80,8 @@ export default function Hero() {
               <div className="text-gray-800 font-bold text-lg">Less Oil</div>
             </div>
             <div className="bg-white/85 backdrop-blur-md rounded-3xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:-translate-y-2 border border-white/30">
-              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">30%</div>
-              <div className="text-gray-800 font-bold text-lg">Faster</div>
+              <div className="text-5xl md:text-6xl font-bold bg-gradient-to-br from-yellow-500 via-orange-500 to-red-500 bg-clip-text text-transparent mb-3">25%</div>
+              <div className="text-gray-800 font-bold text-lg">Faster Cook</div>
             </div>
           </div>
         </div>

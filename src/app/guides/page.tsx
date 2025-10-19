@@ -420,37 +420,61 @@ export default function GuidesPage() {
 
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="border border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-md transition-all">
-                  <div className="text-4xl mb-3">🍰</div>
+                  <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                  </div>
                   <h4 className="font-bold text-gray-900 mb-2">Baking Pans</h4>
                   <p className="text-sm text-gray-600">Perfect for cakes, muffins, and casseroles. Choose heat-resistant, air fryer-safe materials.</p>
                 </div>
 
                 <div className="border border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-md transition-all">
-                  <div className="text-4xl mb-3">🥢</div>
+                  <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                    </svg>
+                  </div>
                   <h4 className="font-bold text-gray-900 mb-2">Grill Racks</h4>
                   <p className="text-sm text-gray-600">Double your cooking capacity and create perfect grill marks on your food.</p>
                 </div>
 
                 <div className="border border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-md transition-all">
-                  <div className="text-4xl mb-3">�串</div>
+                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                   <h4 className="font-bold text-gray-900 mb-2">Skewers</h4>
                   <p className="text-sm text-gray-600">Make kebabs and satay with ease. Metal skewers work best for even cooking.</p>
                 </div>
 
                 <div className="border border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-md transition-all">
-                  <div className="text-4xl mb-3">📄</div>
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </div>
                   <h4 className="font-bold text-gray-900 mb-2">Parchment Paper</h4>
                   <p className="text-sm text-gray-600">Perforated liners make cleanup easier and prevent food from sticking.</p>
                 </div>
 
                 <div className="border border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-md transition-all">
-                  <div className="text-4xl mb-3">🍕</div>
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
                   <h4 className="font-bold text-gray-900 mb-2">Pizza Pan</h4>
                   <p className="text-sm text-gray-600">Make crispy pizzas and reheat leftovers with this versatile accessory.</p>
                 </div>
 
                 <div className="border border-gray-200 rounded-xl p-6 hover:border-primary-300 hover:shadow-md transition-all">
-                  <div className="text-4xl mb-3">🧤</div>
+                  <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-3">
+                    <svg className="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                  </div>
                   <h4 className="font-bold text-gray-900 mb-2">Silicone Mitts</h4>
                   <p className="text-sm text-gray-600">Protect your hands when handling hot baskets and pans safely.</p>
                 </div>

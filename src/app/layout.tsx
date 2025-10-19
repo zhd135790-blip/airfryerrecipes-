@@ -21,11 +21,11 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://airfryerrecipes.com'),
   title: {
-    default: 'Air Fryer Recipes - Easy, Healthy & Delicious Recipes',
+    default: 'Air Fryer Recipes That Actually Work - Kitchen Tested',
     template: '%s | Air Fryer Recipes',
   },
-  description: 'Discover easy and healthy air fryer recipes. From crispy chicken to vegetables and desserts, find the best air fryer cooking ideas for every meal.',
-  keywords: ['air fryer recipes', 'air fryer cooking', 'healthy recipes', 'easy air fryer meals', 'air fryer chicken', 'air fryer vegetables'],
+  description: 'Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From chicken wings to salmon and vegetables, find recipes that work for real home cooks.',
+  keywords: ['air fryer recipes', 'air fryer cooking', 'crispy chicken wings', 'air fryer salmon', 'air fryer vegetables', 'healthy air fryer meals', 'air fryer chicken breast', 'air fryer french fries', 'air fryer bacon', 'air fryer cooking times'],
   authors: [{ name: 'Air Fryer Recipes' }],
   creator: 'Air Fryer Recipes',
   publisher: 'Air Fryer Recipes',
@@ -34,21 +34,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://airfryerrecipes.com',
     siteName: 'Air Fryer Recipes',
-    title: 'Air Fryer Recipes - Easy, Healthy & Delicious Recipes',
-    description: 'Discover easy and healthy air fryer recipes for every meal.',
+    title: 'Air Fryer Recipes That Actually Work - Kitchen Tested',
+    description: 'Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From chicken wings to salmon and vegetables, find recipes that work for real home cooks.',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Air Fryer Recipes',
+        alt: 'Air Fryer Recipes - Kitchen Tested Results',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Air Fryer Recipes - Easy, Healthy & Delicious Recipes',
-    description: 'Discover easy and healthy air fryer recipes for every meal.',
+    title: 'Air Fryer Recipes That Actually Work - Kitchen Tested',
+    description: 'Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From chicken wings to salmon and vegetables, find recipes that work for real home cooks.',
     images: ['/og-image.jpg'],
   },
   robots: {

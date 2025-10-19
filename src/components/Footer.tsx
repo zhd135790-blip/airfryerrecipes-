@@ -10,13 +10,31 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-3xl">🍳</span>
+              <div className="w-10 h-10 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  {/* Air Fryer Base */}
+                  <rect x="4" y="16" width="16" height="4" rx="2" fill="currentColor" opacity="0.9"/>
+                  {/* Air Fryer Body */}
+                  <rect x="5" y="8" width="14" height="8" rx="2" fill="currentColor"/>
+                  {/* Air Fryer Handle */}
+                  <rect x="19" y="10" width="2" height="4" rx="1" fill="currentColor" opacity="0.8"/>
+                  {/* Air Circulation Lines */}
+                  <path d="M7 6 L9 4 L11 6 L13 4 L15 6 L17 4" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.7"/>
+                  {/* Heat Waves */}
+                  <path d="M6 2 Q8 1 10 2 Q12 1 14 2 Q16 1 18 2" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.6"/>
+                  <path d="M5 1 Q7 0 9 1 Q11 0 13 1 Q15 0 17 1 Q19 0 21 1" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4"/>
+                  {/* Static steam effect */}
+                  <circle cx="12" cy="3" r="1" fill="currentColor" opacity="0.5"/>
+                  <circle cx="10" cy="4" r="0.8" fill="currentColor" opacity="0.4"/>
+                  <circle cx="14" cy="4" r="0.8" fill="currentColor" opacity="0.4"/>
+                </svg>
+              </div>
               <span className="text-xl font-display font-bold bg-gradient-to-r from-primary-400 to-orange-400 bg-clip-text text-transparent">
                 Air Fryer Recipes
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
-              Your ultimate destination for delicious, healthy air fryer recipes. Transform your cooking with our tested and proven recipes.
+              Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From beginners to experts, find recipes that work.
             </p>
             <div className="flex gap-3">
               <a 
@@ -103,25 +121,20 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Newsletter */}
+          {/* Contact Info */}
           <div>
-            <h3 className="font-display font-bold text-white text-lg mb-6">Stay Updated</h3>
+            <h3 className="font-display font-bold text-white text-lg mb-6">Contact Us</h3>
             <p className="text-sm text-gray-400 mb-4">
-              Get the latest recipes delivered to your inbox weekly.
+              Have questions or suggestions? We'd love to hear from you!
             </p>
-            <form className="space-y-3">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg focus:outline-none focus:border-primary-500 text-white placeholder-gray-500 transition-colors"
-              />
-              <button
-                type="submit"
-                className="w-full px-4 py-2 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
-              >
-                Subscribe
-              </button>
-            </form>
+            <div className="space-y-2">
+              <p className="text-sm text-gray-400">
+                Email: info@airfryerrecipes.com
+              </p>
+              <p className="text-sm text-gray-400">
+                Follow us for daily recipe inspiration
+              </p>
+            </div>
           </div>
         </div>
 

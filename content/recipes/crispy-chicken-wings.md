@@ -1,6 +1,6 @@
 ---
-title: Air Fryer Chicken Wings Recipe - Crispy & Easy
-excerpt: Best air fryer chicken wings recipe! Perfectly crispy chicken wings with no deep frying. These air fryer wings are juicy inside and crispy outside with minimal oil.
+title: Crispy Air Fryer Chicken Wings - No Deep Frying Required
+excerpt: Perfectly crispy chicken wings made in the air fryer with minimal oil. These wings stay juicy inside while getting that golden, crispy exterior you crave.
 mainImage: https://plus.unsplash.com/premium_photo-1672498193267-4f0e8c819bc8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWlyJTIwRnJ5ZXIlMjBDaGlja2VuJTIwV2luZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
 category: appetizers-and-snacks
 tags: [air-fryer-chicken-wings-recipe, chicken-wings, air-fryer-wings-recipe, easy, quick-meals, party-food]
@@ -9,8 +9,8 @@ cookTime: 25
 servings: 4
 difficulty: easy
 date: 2024-10-13
-seoTitle: Air Fryer Chicken Wings Recipe - Perfect Crispy Wings in 35 Minutes
-seoDescription: Learn the best air fryer chicken wings recipe! Make crispy chicken wings in air fryer with no deep frying. Easy recipe perfect for game day or any occasion!
+seoTitle: Crispy Air Fryer Chicken Wings Recipe - Perfect Results Every Time
+seoDescription: Make restaurant-quality crispy chicken wings in your air fryer. This tested recipe delivers juicy wings with a golden, crispy exterior using minimal oil.
 ingredients:
   - 2 lbs chicken wings
   - 1 tablespoon olive oil

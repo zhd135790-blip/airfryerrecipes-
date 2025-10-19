@@ -108,7 +108,7 @@ export default function PrivacyPage() {
                         Personal Information
                       </h3>
                       <ul className="text-gray-700 space-y-2">
-                        <li><strong>Contact Details:</strong> Name, email address (when you subscribe to newsletters or contact us)</li>
+                        <li><strong>Contact Details:</strong> Name, email address (when you contact us)</li>
                         <li><strong>Account Information:</strong> Username and preferences (if you create an account)</li>
                         <li><strong>Communication Records:</strong> Messages you send through our contact forms</li>
                       </ul>

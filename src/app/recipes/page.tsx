@@ -32,6 +32,8 @@ interface Recipe {
 
 export default function RecipesPage() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
+  const [filteredRecipes, setFilteredRecipes] = useState<Recipe[]>([])
+  const [selectedCategory, setSelectedCategory] = useState('All')
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -42,13 +44,16 @@ export default function RecipesPage() {
         if (response.ok) {
           const allRecipes = await response.json()
           setRecipes(allRecipes)
+          setFilteredRecipes(allRecipes)
         } else {
           console.error('Failed to fetch recipes')
           setRecipes([])
+          setFilteredRecipes([])
         }
       } catch (error) {
         console.error('Error loading recipes:', error)
         setRecipes([])
+        setFilteredRecipes([])
       } finally {
         setLoading(false)
       }
@@ -56,6 +61,31 @@ export default function RecipesPage() {
 
     loadRecipes()
   }, [])
+
+  // 过滤食谱函数
+  const filterRecipes = (category: string) => {
+    setSelectedCategory(category)
+    if (category === 'All') {
+      setFilteredRecipes(recipes)
+    } else {
+      const filtered = recipes.filter(recipe => {
+        // 将分类名称转换为小写并处理特殊字符
+        const recipeCategory = recipe.category.toLowerCase().replace(/[^a-z]/g, '')
+        const filterCategory = category.toLowerCase().replace(/[^a-z]/g, '')
+        
+        // 处理一些特殊的分类映射
+        if (filterCategory === 'meatpoultry' && (recipeCategory.includes('meat') || recipeCategory.includes('poultry'))) {
+          return true
+        }
+        if (filterCategory === 'quickmeals' && (recipeCategory.includes('quick') || recipeCategory.includes('easy'))) {
+          return true
+        }
+        
+        return recipeCategory.includes(filterCategory)
+      })
+      setFilteredRecipes(filtered)
+    }
+  }
 
   if (loading) {
     return (
@@ -88,12 +118,12 @@ export default function RecipesPage() {
               </svg>
             </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 drop-shadow-lg">
-              All Air Fryer Recipes
-            </h1>
-            <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto mb-8 drop-shadow">
-              Explore our complete collection of {recipes.length}+ delicious air fryer recipes
-            </p>
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 drop-shadow-lg">
+                    Air Fryer Recipe Collection
+                  </h1>
+                  <p className="text-xl md:text-2xl text-white/95 max-w-3xl mx-auto mb-8 drop-shadow">
+                    Browse {recipes.length}+ kitchen-tested air fryer recipes for crispy, healthy meals
+                  </p>
             
             {/* Stats Bar */}
             <div className="flex flex-wrap justify-center gap-6 text-white">
@@ -130,7 +160,12 @@ export default function RecipesPage() {
             {['All', 'Breakfast', 'Meat & Poultry', 'Seafood', 'Vegetables', 'Desserts', 'Vegan', 'Quick Meals'].map((category) => (
               <button
                 key={category}
-                className="px-6 py-2.5 rounded-full bg-white text-gray-700 hover:bg-orange-500 hover:text-white transition-all duration-300 shadow-sm hover:shadow-md font-medium text-sm"
+                onClick={() => filterRecipes(category)}
+                className={`px-6 py-2.5 rounded-full transition-all duration-300 shadow-sm hover:shadow-md font-medium text-sm ${
+                  selectedCategory === category
+                    ? 'bg-orange-500 text-white shadow-md'
+                    : 'bg-white text-gray-700 hover:bg-orange-500 hover:text-white'
+                }`}
               >
                 {category}
               </button>
@@ -167,42 +202,57 @@ export default function RecipesPage() {
                 </div>
               </div>
               <div className="relative h-64 md:h-80">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-2xl"></div>
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-9xl">👨‍🍳</div>
-                </div>
+                        <div className="absolute inset-0 bg-gradient-to-br from-yellow-400/20 to-orange-400/20 rounded-2xl"></div>
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <svg className="w-24 h-24 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                          </svg>
+                        </div>
               </div>
             </div>
           </div>
 
           {/* Recipes Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {recipes.map((recipe) => (
+            {filteredRecipes.map((recipe) => (
               <RecipeCard key={recipe._id} recipe={recipe} />
             ))}
           </div>
+          
+          {/* No Results Message */}
+          {filteredRecipes.length === 0 && !loading && (
+            <div className="text-center py-12">
+              <div className="w-24 h-24 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47-.881-6.08-2.33" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">No recipes found</h3>
+              <p className="text-gray-600 mb-4">Try selecting a different category or browse all recipes.</p>
+              <button
+                onClick={() => filterRecipes('All')}
+                className="px-6 py-2 bg-orange-500 text-white rounded-full hover:bg-orange-600 transition-colors"
+              >
+                Show All Recipes
+              </button>
+            </div>
+          )}
 
           {/* Call to Action Banner */}
           <div className="mt-16 bg-gradient-to-r from-green-500 to-teal-600 rounded-3xl p-8 md:p-12 text-center shadow-2xl">
-            <div className="max-w-3xl mx-auto">
-              <div className="text-6xl mb-4">🔥</div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
-                Can't Find What You're Looking For?
-              </h2>
-              <p className="text-xl text-green-50 mb-8">
-                We're constantly adding new recipes! Subscribe to get the latest air fryer recipes delivered to your inbox.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="px-6 py-3 rounded-full text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-green-300 shadow-lg min-w-[300px]"
-                />
-                <button className="px-8 py-3 bg-white text-green-600 font-bold rounded-full hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
-                  Subscribe Free
-                </button>
-              </div>
-            </div>
+                  <div className="max-w-3xl mx-auto">
+                    <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                      </svg>
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">
+                      Looking for Something Specific?
+                    </h2>
+                    <p className="text-xl text-green-50 mb-8">
+                      We're always adding new recipes. Check back regularly for the latest air fryer cooking ideas.
+                    </p>
+                  </div>
           </div>
         </div>
       </div>
