@@ -13,7 +13,7 @@ seoTitle: Perfect Air Fryer Bacon - Crispy & Easy Recipe
 seoDescription: Make the crispiest bacon in your air fryer in just 12 minutes! No mess, no grease splatters, perfect every time.
 ingredients:
   - 8 slices bacon
-  - Optional: black pepper, maple syrup
+  - Black pepper, maple syrup (optional)
 instructions:
   - Preheat air fryer to 400°F (200°C) for 3 minutes.
   - Place bacon in a single layer in the air fryer basket (don't overlap).

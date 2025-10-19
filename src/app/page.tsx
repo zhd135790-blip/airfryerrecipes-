@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useLanguage } from '@/contexts/LanguageContext'
 import RecipeCard from '@/components/RecipeCard'
 import Hero from '@/components/Hero'
 
@@ -32,7 +31,6 @@ interface Recipe {
 }
 
 export default function Home() {
-  const { language, t } = useLanguage()
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [loading, setLoading] = useState(true)
 
@@ -40,7 +38,7 @@ export default function Home() {
     const loadRecipes = async () => {
       setLoading(true)
       try {
-        const response = await fetch(`/api/recipes?language=${language}`)
+        const response = await fetch(`/api/recipes?language=en`)
         if (response.ok) {
           const allRecipes = await response.json()
           setRecipes(allRecipes.slice(0, 12))
@@ -57,14 +55,14 @@ export default function Home() {
     }
 
     loadRecipes()
-  }, [language])
+  }, [])
 
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-orange-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">{t('common.loading')}</p>
+          <p className="text-gray-600">Loading...</p>
         </div>
       </div>
     )
@@ -78,10 +76,10 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-display font-bold text-gray-900 mb-4">
-              {t('home.bestRecipes')}
+              Best Air Fryer Recipes - Popular & Easy
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {t('home.bestRecipesDesc')}
+              Discover our collection of easy air fryer recipes that are healthy, quick, and absolutely delicious. From air fryer salmon recipes to crispy chicken wings, we have the best air fryer recipes for every meal.
             </p>
           </div>
           
@@ -89,54 +87,50 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl border border-orange-200">
               <h3 className="text-xl font-bold mb-2 text-orange-800">
-                {t('home.chickenRecipes')}
+                Air Fryer Chicken Recipes
               </h3>
               <p className="text-orange-700 text-sm">
-                {t('home.chickenRecipesDesc')}
+                Perfect chicken breast and wings recipes
               </p>
               <div className="mt-3 text-xs text-orange-600">
-                {t('home.chickenExamples').split('\n').map((line, i) => (
-                  <div key={i}>✓ {line}</div>
-                ))}
+                <div>✓ Air Fryer Chicken Breast Recipe</div>
+                <div>✓ Air Fryer Chicken Wings Recipe</div>
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl border border-blue-200">
               <h3 className="text-xl font-bold mb-2 text-blue-800">
-                {t('home.salmonRecipes')}
+                Air Fryer Salmon Recipes
               </h3>
               <p className="text-blue-700 text-sm">
-                {t('home.salmonRecipesDesc')}
+                Healthy and delicious salmon dishes
               </p>
               <div className="mt-3 text-xs text-blue-600">
-                {t('home.salmonExamples').split('\n').map((line, i) => (
-                  <div key={i}>✓ {line}</div>
-                ))}
+                <div>✓ Salmon Air Fryer Recipe</div>
+                <div>✓ Air Fryer Salmon Recipe</div>
               </div>
             </div>
             <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl border border-green-200">
               <h3 className="text-xl font-bold mb-2 text-green-800">
-                {t('home.easyRecipes')}
+                Easy Air Fryer Recipes
               </h3>
               <p className="text-green-700 text-sm">
-                {t('home.easyRecipesDesc')}
+                Simple recipes for beginners
               </p>
               <div className="mt-3 text-xs text-green-600">
-                {t('home.easyExamples').split('\n').map((line, i) => (
-                  <div key={i}>✓ {line}</div>
-                ))}
+                <div>✓ Air Fryer Bacon Recipe</div>
+                <div>✓ Air Fryer Broccoli Recipe</div>
               </div>
             </div>
             <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl border border-purple-200">
               <h3 className="text-xl font-bold mb-2 text-purple-800">
-                {t('home.healthyRecipes')}
+                Healthy Air Fryer Recipes
               </h3>
               <p className="text-purple-700 text-sm">
-                {t('home.healthyRecipesDesc')}
+                Nutritious meals with less oil
               </p>
               <div className="mt-3 text-xs text-purple-600">
-                {t('home.healthyExamples').split('\n').map((line, i) => (
-                  <div key={i}>✓ {line}</div>
-                ))}
+                <div>✓ Air Fryer Cauliflower Recipes</div>
+                <div>✓ Air Fryer Shrimp Recipes</div>
               </div>
             </div>
           </div>
@@ -153,10 +147,10 @@ export default function Home() {
         <div className="container">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-gray-900 mb-4">
-              {t('home.whyAirFryer')}
+              Why Choose Air Fryer?
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              {t('home.whyAirFryerDesc')}
+              Discover the benefits that make air frying the healthiest and most convenient cooking method
             </p>
           </div>
           
@@ -166,10 +160,10 @@ export default function Home() {
                 🥗
               </div>
               <h3 className="text-2xl font-display font-bold mb-3 text-gray-900">
-                {t('home.healthierMeals')}
+                Healthier Meals
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {t('home.healthierMealsDesc')}
+                Use up to <span className="font-bold text-green-600">75% less oil</span> while maintaining that perfect crispy texture you love
               </p>
             </div>
             
@@ -178,10 +172,10 @@ export default function Home() {
                 ⚡
               </div>
               <h3 className="text-2xl font-display font-bold mb-3 text-gray-900">
-                {t('home.superFast')}
+                Super Fast
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {t('home.superFastDesc')}
+                Cook meals <span className="font-bold text-orange-600">20-30% faster</span> than traditional ovens. More time for what matters!
               </p>
             </div>
             
@@ -190,10 +184,10 @@ export default function Home() {
                 👨‍🍳
               </div>
               <h3 className="text-2xl font-display font-bold mb-3 text-gray-900">
-                {t('home.easyToMaster')}
+                Easy to Master
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                {t('home.easyToMasterDesc')}
+                Simple recipes perfect for <span className="font-bold text-blue-600">beginners and pros</span> alike. No special skills needed!
               </p>
             </div>
           </div>

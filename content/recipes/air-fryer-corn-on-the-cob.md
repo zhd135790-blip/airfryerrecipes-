@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Corn on the Cob - Sweet & Tender
 excerpt: Perfectly cooked air fryer corn on the cob that's sweet, tender, and delicious. Ready in just 12 minutes with optional flavor variations!
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://cdn.pixabay.com/photo/2016/02/13/18/20/corn-1198343_1280.jpg
 category: vegetables
 tags: [corn, side-dish, summer, easy, vegan, gluten-free]
 prepTime: 5
@@ -15,7 +15,7 @@ ingredients:
   - 4 ears fresh corn, husked
   - 2 tablespoons butter, melted
   - Salt and pepper to taste
-  - Optional toppings: garlic powder, paprika, parmesan, fresh herbs
+  - Garlic powder, paprika, parmesan, fresh herbs (optional toppings)
 instructions:
   - Remove husks and silk from corn
   - Rinse corn and pat dry

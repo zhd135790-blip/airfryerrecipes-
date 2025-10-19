@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Roasted Vegetables
 excerpt: Colorful and healthy roasted vegetables made easy in the air fryer. Perfect as a side dish or light meal.
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://imgcache.dealmoon.com/fsvrugccache.dealmoon.com/ugc/874/e1e/4f3/41342a198d5549c1a73b576.jpg_1280_1280_3_8a19.jpg
 category: vegetables
 tags: [healthy, vegan, gluten-free, quick-meals]
 prepTime: 15
@@ -21,7 +21,7 @@ ingredients:
   - 1 teaspoon Italian seasoning
   - 1/2 teaspoon garlic powder
   - Salt and pepper to taste
-  - Optional: Parmesan cheese for serving
+  - Parmesan cheese (optional, for serving)
 instructions:
   - Wash and cut all vegetables into similar-sized pieces for even cooking.
   - In a large bowl, toss vegetables with olive oil and seasonings.

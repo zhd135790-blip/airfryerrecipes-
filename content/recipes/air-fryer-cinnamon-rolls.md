@@ -1,7 +1,7 @@
 ---
 title: Easy Air Fryer Cinnamon Rolls - Quick Breakfast Treat
 excerpt: Fluffy air fryer cinnamon rolls with cream cheese frosting. Quick and easy breakfast treat using store-bought dough!
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://cdn.pixabay.com/photo/2019/12/25/17/55/cinnamon-roll-4719023_1280.jpg
 category: breakfast-and-brunch
 tags: [cinnamon-rolls, breakfast, pastries, quick, easy, sweet]
 prepTime: 10
@@ -14,7 +14,7 @@ seoDescription: Make fluffy air fryer cinnamon rolls in just 8 minutes! This eas
 ingredients:
   - 1 package (8 rolls) refrigerated cinnamon rolls with icing
   - Cooking spray
-  - Optional: 4 oz cream cheese, 1/4 cup butter, 1 cup powdered sugar, 1 tsp vanilla for homemade frosting
+  - 4 oz cream cheese, 1/4 cup butter, 1 cup powdered sugar, 1 tsp vanilla (optional, for homemade frosting)
 instructions:
   - Remove cinnamon rolls from package and separate
   - Cut parchment paper to fit air fryer basket

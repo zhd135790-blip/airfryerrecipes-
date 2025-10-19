@@ -1,7 +1,7 @@
 ---
 title: Mini Air Fryer Cheesecake - Creamy & Delicious
 excerpt: Perfectly creamy mini air fryer cheesecakes that are rich and delicious. Individual portions make perfect dessert for any occasion!
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://images.unsplash.com/photo-1676900021733-fdc8e621a0c7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=872
 category: desserts
 tags: [cheesecake, dessert, special-occasion, individual-servings, make-ahead]
 prepTime: 15
@@ -19,7 +19,7 @@ ingredients:
   - 2 tablespoons sour cream
   - 1 tablespoon lemon juice
   - 6 vanilla wafer cookies (or graham cracker crust)
-  - Toppings: fresh berries, whipped cream, fruit sauce
+  - Fresh berries, whipped cream, fruit sauce (for toppings)
 instructions:
   - Beat cream cheese and sugar until smooth and fluffy
   - Add egg, vanilla extract, sour cream, and lemon juice

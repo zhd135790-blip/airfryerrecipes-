@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Donuts
 excerpt: Light and fluffy donuts made in your air fryer! No deep frying needed - these are healthier but just as delicious as traditional donuts.
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://images.unsplash.com/photo-1619286311061-00b97454de91?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740
 category: desserts
 tags: [sweet, baking, kid-friendly, weekend-treat]
 prepTime: 15

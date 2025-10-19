@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer French Fries
 excerpt: Golden, crispy French fries with 75% less oil than deep frying. These homemade fries are healthier and just as delicious!
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://images.unsplash.com/photo-1751698120377-740fa2d95763?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740
 category: appetizers-and-snacks
 tags: [easy, kid-friendly, comfort-food]
 prepTime: 20
@@ -16,7 +16,7 @@ ingredients:
   - 1 tablespoon olive oil
   - 1 teaspoon salt
   - 1/2 teaspoon black pepper
-  - Optional: paprika, garlic powder, or your favorite seasonings
+  - Paprika, garlic powder, or your favorite seasonings (optional)
 instructions:
   - Peel potatoes (optional) and cut into 1/4-inch thick sticks.
   - Soak cut potatoes in cold water for at least 30 minutes. This removes excess starch.

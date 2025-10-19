@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Stuffed Peppers - Healthy Complete Meal
 excerpt: Colorful air fryer stuffed peppers filled with seasoned ground beef, rice, and cheese. Healthy, complete meal ready in 30 minutes!
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://plus.unsplash.com/premium_photo-1711593314249-c1e394bae555?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWlyJTIwRnJ5ZXIlMjBTdHVmZmVkJTIwUGVwcGVyc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600
 category: quick-meals
 tags: [stuffed-peppers, dinner, healthy, meal-prep, gluten-free]
 prepTime: 15

@@ -1,7 +1,7 @@
 ---
 title: Air Fryer Crab Cakes - Restaurant-Quality Seafood
 excerpt: Delicious air fryer crab cakes with jumbo lump crab meat. Golden, crispy outside and tender inside. Elegant appetizer or main course!
-mainImage: https://images.unsplash.com/photo-1626200419199-391ae4be7a41?w=800&h=600&fit=crop
+mainImage: https://recipe1.ezmember.co.kr/cache/recipe/2021/11/12/b8e6a1ddc6a3ac3c79b9f6daa70fc7e31.jpg
 category: seafood
 tags: [crab-cakes, seafood, elegant, dinner, appetizer, special-occasion]
 prepTime: 20

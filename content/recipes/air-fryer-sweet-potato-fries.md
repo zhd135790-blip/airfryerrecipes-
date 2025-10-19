@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Sweet Potato Fries - Healthy & Delicious
 excerpt: Perfectly crispy air fryer sweet potato fries with amazing flavor and 70% less oil. Healthy side dish ready in 20 minutes!
-mainImage: https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=800&h=600&fit=crop
+mainImage: https://images.unsplash.com/photo-1687573973164-b08d48920293?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=830
 category: vegetables
 tags: [sweet-potato, fries, healthy, vegan, gluten-free, side-dish]
 prepTime: 10

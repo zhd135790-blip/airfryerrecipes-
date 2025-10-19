@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Coconut Shrimp - Restaurant-Style Appetizer
 excerpt: Crispy, golden coconut shrimp made in the air fryer with sweet chili dipping sauce. Restaurant-quality appetizer ready in 15 minutes!
-mainImage: https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=600&fit=crop
+mainImage: https://cdn.pixabay.com/photo/2017/08/07/21/51/shrimp-2608259_1280.jpg
 category: seafood
 tags: [coconut-shrimp, seafood, appetizer, party-food, tropical, quick]
 prepTime: 15
