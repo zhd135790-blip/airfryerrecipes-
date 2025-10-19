@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { siteConfig } from '@/lib/config'
+import AirFryerIcon from './AirFryerIcon'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -12,23 +13,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="w-10 h-10 bg-gradient-to-br from-orange-500 via-red-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  {/* Air Fryer Base */}
-                  <rect x="4" y="16" width="16" height="4" rx="2" fill="currentColor" opacity="0.9"/>
-                  {/* Air Fryer Body */}
-                  <rect x="5" y="8" width="14" height="8" rx="2" fill="currentColor"/>
-                  {/* Air Fryer Handle */}
-                  <rect x="19" y="10" width="2" height="4" rx="1" fill="currentColor" opacity="0.8"/>
-                  {/* Air Circulation Lines */}
-                  <path d="M7 6 L9 4 L11 6 L13 4 L15 6 L17 4" stroke="currentColor" strokeWidth="1.5" fill="none" opacity="0.7"/>
-                  {/* Heat Waves */}
-                  <path d="M6 2 Q8 1 10 2 Q12 1 14 2 Q16 1 18 2" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.6"/>
-                  <path d="M5 1 Q7 0 9 1 Q11 0 13 1 Q15 0 17 1 Q19 0 21 1" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.4"/>
-                  {/* Static steam effect */}
-                  <circle cx="12" cy="3" r="1" fill="currentColor" opacity="0.5"/>
-                  <circle cx="10" cy="4" r="0.8" fill="currentColor" opacity="0.4"/>
-                  <circle cx="14" cy="4" r="0.8" fill="currentColor" opacity="0.4"/>
-                </svg>
+                <AirFryerIcon className="w-6 h-6 text-white" animated={false} />
               </div>
               <span className="text-xl font-display font-bold bg-gradient-to-r from-primary-400 to-orange-400 bg-clip-text text-transparent">
                 {siteConfig.siteName}
