@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Menu Test - Simple</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: Arial, sans-serif; 
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: white;
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .mobile-menu-btn {
+            display: block;
+            background: none;
+            border: 2px solid #ddd;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            min-width: 44px;
+            min-height: 44px;
+        }
+        
+        .hamburger {
+            width: 24px;
+            height: 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .hamburger span {
+            width: 100%;
+            height: 2px;
+            background: #333;
+            transition: all 0.3s;
+        }
+        
+        .hamburger.open span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+        
+        .mobile-menu {
+            background: white;
+            margin-top: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+            opacity: 1;
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 1rem 1.5rem;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #eee;
+            font-weight: 500;
+        }
+        
+        .menu-item:hover {
+            background: #f8f9fa;
+            color: #007bff;
+        }
+        
+        .menu-item:last-child {
+            border-bottom: none;
+        }
+        
+        .content {
+            padding: 2rem;
+        }
+        
+        @media (min-width: 768px) {
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">🍳 Air Fryer Recipes</div>
+            <button class="mobile-menu-btn" onclick="toggleMenu()">
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </nav>
+        
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="menu-item" onclick="closeMenu()">📝 Recipes</a>
+            <a href="#" class="menu-item" onclick="closeMenu()">📂 Categories</a>
+            <a href="#" class="menu-item" onclick="closeMenu()">🧮 Calculator</a>
+            <a href="#" class="menu-item" onclick="closeMenu()">📖 Guides</a>
+            <a href="#" class="menu-item" onclick="closeMenu()">❓ FAQ</a>
+            <a href="#" class="menu-item" onclick="closeMenu()">ℹ️ About</a>
+        </div>
+    </header>
+    
+    <div class="content">
+        <h1>Mobile Menu Test</h1>
+        <p>点击右上角的汉堡菜单按钮测试功能。</p>
+        <p>如果你在手机上，请缩小浏览器窗口或切换到移动设备视图。</p>
+        
+        <h2>测试步骤：</h2>
+        <ol>
+            <li>点击汉堡菜单按钮（三条横线）</li>
+            <li>菜单应该展开显示所有选项</li>
+            <li>点击任何菜单项应该关闭菜单</li>
+            <li>再次点击按钮应该关闭菜单</li>
+        </ol>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            
+            menu.classList.toggle('open');
+            hamburger.classList.toggle('open');
+            
+            console.log('Menu toggled!', menu.classList.contains('open'));
+        }
+        
+        function closeMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.getElementById('hamburger');
+            
+            menu.classList.remove('open');
+            hamburger.classList.remove('open');
+            
+            console.log('Menu closed');
+        }
+        
+        // 点击菜单外部关闭菜单
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const button = document.querySelector('.mobile-menu-btn');
+            
+            if (!menu.contains(event.target) && !button.contains(event.target)) {
+                closeMenu();
+            }
+        });
+    </script>
+</body>
+</html>

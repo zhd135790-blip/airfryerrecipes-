@@ -1,9 +1,21 @@
 'use client'
 
 import Link from 'next/link'
+import { useState } from 'react'
 import AirFryerIcon from './AirFryerIcon'
 
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+
+  const toggleMobileMenu = () => {
+    console.log('Menu clicked!', isMobileMenuOpen)
+    setIsMobileMenuOpen(!isMobileMenuOpen)
+  }
+
+  const closeMobileMenu = () => {
+    console.log('Closing menu')
+    setIsMobileMenuOpen(false)
+  }
   
   return (
     <header className="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
@@ -27,69 +39,132 @@ export default function Header() {
             </div>
           </Link>
           
-            {/* Desktop Navigation */}
-            <div className="hidden md:flex items-center gap-2">
-              <Link
-                href="/recipes"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                Recipes
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-              <Link
-                href="/categories"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                Categories
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-              <Link
-                href="/calculator"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                Calculator
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-              <Link
-                href="/guides"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                Guides
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-              <Link
-                href="/faq"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                FAQ
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-              <Link
-                href="/about"
-                className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
-              >
-                About
-                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
-              </Link>
-            
-              {/* CTA Button */}
-              <Link 
-                href="/recipes"
-                className="ml-2 px-6 py-2.5 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
-              >
-                View All Recipes
-              </Link>
-            </div>
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center gap-2">
+            <Link
+              href="/recipes"
+              className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
+            >
+              Recipes
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+            <Link
+              href="/categories"
+              className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
+            >
+              Categories
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+            <Link
+              href="/calculator"
+              className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
+            >
+              Calculator
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+            <Link
+              href="/guides"
+              className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
+            >
+              Guides
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+            <Link
+              href="/faq"
+              className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
+            >
+              FAQ
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+            <Link
+              href="/about"
+              className="relative px-4 py-2 text-gray-700 hover:text-primary-600 font-semibold transition-colors group"
+            >
+              About
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-primary-600 to-orange-600 scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+            </Link>
+          
+            {/* CTA Button */}
+            <Link 
+              href="/recipes"
+              className="ml-2 px-6 py-2.5 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
+            >
+              View All Recipes
+            </Link>
+          </div>
 
-          {/* Mobile Menu Button */}
-          <button className="md:hidden p-2 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          {/* Mobile Menu Button - 简化版本 */}
+          <button 
+            onClick={toggleMobileMenu}
+            className="md:hidden p-3 text-gray-700 hover:text-primary-600 hover:bg-primary-50 rounded-lg transition-colors border border-gray-200"
+            style={{ minWidth: '44px', minHeight: '44px' }}
+            aria-label="Toggle mobile menu"
+          >
+            <div className="w-6 h-6 flex flex-col justify-center items-center">
+              <div className={`w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></div>
+              <div className={`w-5 h-0.5 bg-current transition-all duration-300 my-1 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`w-5 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></div>
+            </div>
           </button>
+        </div>
+
+        {/* Mobile Menu - 简化版本 */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+          <div className="pt-4 pb-2 space-y-1 bg-white/95 backdrop-blur-sm rounded-lg shadow-lg mt-2">
+            <Link
+              href="/recipes"
+              onClick={closeMobileMenu}
+              className="block px-6 py-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-semibold transition-colors border-b border-gray-100"
+            >
+              📝 Recipes
+            </Link>
+            <Link
+              href="/categories"
+              onClick={closeMobileMenu}
+              className="block px-6 py-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-semibold transition-colors border-b border-gray-100"
+            >
+              📂 Categories
+            </Link>
+            <Link
+              href="/calculator"
+              onClick={closeMobileMenu}
+              className="block px-6 py-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-semibold transition-colors border-b border-gray-100"
+            >
+              🧮 Calculator
+            </Link>
+            <Link
+              href="/guides"
+              onClick={closeMobileMenu}
+              className="block px-6 py-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-semibold transition-colors border-b border-gray-100"
+            >
+              📖 Guides
+            </Link>
+            <Link
+              href="/faq"
+              onClick={closeMobileMenu}
+              className="block px-6 py-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-semibold transition-colors border-b border-gray-100"
+            >
+              ❓ FAQ
+            </Link>
+            <Link
+              href="/about"
+              onClick={closeMobileMenu}
+              className="block px-6 py-4 text-gray-700 hover:text-primary-600 hover:bg-primary-50 font-semibold transition-colors border-b border-gray-100"
+            >
+              ℹ️ About
+            </Link>
+            
+            {/* Mobile CTA Button */}
+            <Link 
+              href="/recipes"
+              onClick={closeMobileMenu}
+              className="block mx-6 mt-4 mb-2 px-6 py-3 bg-gradient-to-r from-primary-600 to-orange-600 hover:from-primary-700 hover:to-orange-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all duration-300 text-center"
+            >
+              🎯 View All Recipes
+            </Link>
+          </div>
         </div>
       </nav>
     </header>
   )
 }
-
