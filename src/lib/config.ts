@@ -10,6 +10,9 @@ export const siteConfig = {
   email: 'info@bestair-fryerrecipes.com',
   privacyEmail: 'privacy@bestair-fryerrecipes.com',
   
+  // Google Analytics
+  googleAnalyticsId: 'G-HV679Y92QH',
+  
   // 社交媒体链接（如需要可以添加）
   social: {
     twitter: '',
