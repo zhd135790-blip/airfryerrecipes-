@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Salmon - Crispy Skin, Tender Flesh
 excerpt: Master the art of cooking salmon in your air fryer. This recipe delivers perfectly cooked salmon with crispy skin and tender, flaky flesh every time.
-mainImage: https://images.unsplash.com/photo-1617146629059-0814c2d61b41?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1325
+mainImage: /images/recipes/photo-1617146629059-0814c2d61b41.jpg
 category: seafood
 tags: [salmon-air-fryer-recipe, air-fryer-salmon-recipe, salmon, healthy, quick-meals, omega-3, gluten-free]
 prepTime: 5

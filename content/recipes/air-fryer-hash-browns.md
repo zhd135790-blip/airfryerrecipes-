@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Hash Browns - Perfect Breakfast Side
 excerpt: Extra crispy air fryer hash browns that are golden and delicious. Perfect breakfast side dish ready in 20 minutes with minimal oil!
-mainImage: https://forktospoon.com/wp-content/uploads/2024/02/Shredded-Hashbrowns.png
+mainImage: /images/recipes/photo-1551782450-17144efb9c50.jpg
 category: breakfast-and-brunch
 tags: [hash-browns, breakfast, side-dish, easy, vegetarian, gluten-free]
 prepTime: 10

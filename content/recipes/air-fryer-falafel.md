@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Falafel - Healthy Middle Eastern Favorite
 excerpt: Crispy air fryer falafel made with chickpeas and fresh herbs. Healthy, vegan, and delicious with only 1 tablespoon of oil!
-mainImage: https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&h=600&fit=crop
+mainImage: /images/recipes/photo-1601050690597-df0568f70950.jpg
 category: vegan
 tags: [falafel, vegan, vegetarian, healthy, middle-eastern, gluten-free]
 prepTime: 15

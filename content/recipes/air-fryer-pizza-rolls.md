@@ -1,7 +1,7 @@
 ---
 title: Homemade Air Fryer Pizza Rolls - Better Than Store-Bought
 excerpt: Crispy homemade air fryer pizza rolls filled with cheese and pepperoni. Fun appetizer or snack that's better than store-bought!
-mainImage: https://cdn.pixabay.com/photo/2015/04/08/13/14/pizza-712667_1280.jpg
+mainImage: /images/recipes/pizza-712667_1280.jpg
 category: appetizers-and-snacks
 tags: [pizza-rolls, appetizer, kid-friendly, party-food, make-ahead]
 prepTime: 20

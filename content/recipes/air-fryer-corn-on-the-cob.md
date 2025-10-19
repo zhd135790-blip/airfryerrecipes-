@@ -1,7 +1,7 @@
 ---
 title: Perfect Air Fryer Corn on the Cob - Sweet & Tender
 excerpt: Perfectly cooked air fryer corn on the cob that's sweet, tender, and delicious. Ready in just 12 minutes with optional flavor variations!
-mainImage: https://cdn.pixabay.com/photo/2016/02/13/18/20/corn-1198343_1280.jpg
+mainImage: /images/recipes/corn-1198343_1280.jpg
 category: vegetables
 tags: [corn, side-dish, summer, easy, vegan, gluten-free]
 prepTime: 5

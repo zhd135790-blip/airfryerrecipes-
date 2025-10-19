@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Chicken Wings - No Deep Frying Required
 excerpt: Perfectly crispy chicken wings made in the air fryer with minimal oil. These wings stay juicy inside while getting that golden, crispy exterior you crave.
-mainImage: https://plus.unsplash.com/premium_photo-1672498193267-4f0e8c819bc8?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8QWlyJTIwRnJ5ZXIlMjBDaGlja2VuJTIwV2luZ3N8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600
+mainImage: /images/recipes/premium_photo-1672498193267-4f0e8c819bc8.jpg
 category: appetizers-and-snacks
 tags: [air-fryer-chicken-wings-recipe, chicken-wings, air-fryer-wings-recipe, easy, quick-meals, party-food]
 prepTime: 10

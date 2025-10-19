@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Onion Rings - Restaurant-Style Side
 excerpt: Perfectly crispy air fryer onion rings with golden, crunchy coating. Restaurant-quality results with 80% less oil!
-mainImage: https://images.unsplash.com/photo-1639024471283-03518883512d?w=800&h=600&fit=crop
+mainImage: /images/recipes/photo-1639024471283-03518883512d.jpg
 category: appetizers-and-snacks
 tags: [onion-rings, appetizer, side-dish, party-food, comfort-food]
 prepTime: 15

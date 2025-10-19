@@ -1,7 +1,7 @@
 ---
 title: Easy Air Fryer Cinnamon Rolls - Quick Breakfast Treat
 excerpt: Fluffy air fryer cinnamon rolls with cream cheese frosting. Quick and easy breakfast treat using store-bought dough!
-mainImage: https://cdn.pixabay.com/photo/2019/12/25/17/55/cinnamon-roll-4719023_1280.jpg
+mainImage: /images/recipes/cinnamon-roll-4719023_1280.jpg
 category: breakfast-and-brunch
 tags: [cinnamon-rolls, breakfast, pastries, quick, easy, sweet]
 prepTime: 10

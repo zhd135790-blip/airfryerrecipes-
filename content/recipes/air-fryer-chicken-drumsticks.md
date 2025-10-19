@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Chicken Drumsticks - Budget-Friendly Dinner
 excerpt: Juicy air fryer chicken drumsticks with extra crispy skin. Budget-friendly family dinner ready in 25 minutes!
-mainImage: https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=800&h=600&fit=crop
+mainImage: /images/recipes/photo-1626645738196-c2a7c87a8f58.jpg
 category: meat-and-poultry
 tags: [chicken-drumsticks, budget-friendly, family-dinner, easy, kid-friendly]
 prepTime: 10

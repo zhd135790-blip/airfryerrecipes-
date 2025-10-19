@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer French Fries
 excerpt: Golden, crispy French fries with 75% less oil than deep frying. These homemade fries are healthier and just as delicious!
-mainImage: https://images.unsplash.com/photo-1751698120377-740fa2d95763?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1740
+mainImage: /images/recipes/photo-1751698120377-740fa2d95763.jpg
 category: appetizers-and-snacks
 tags: [easy, kid-friendly, comfort-food]
 prepTime: 20

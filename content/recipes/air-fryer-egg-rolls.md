@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Egg Rolls - Better Than Takeout
 excerpt: Crispy air fryer egg rolls filled with pork and vegetables. Healthier than deep-fried with the same amazing crunch. Ready in 15 minutes!
-mainImage: https://pinchmegood.com/wp-content/uploads/2022/02/IMG_6275-710x1024.jpg
+mainImage: /images/recipes/photo-1551218808-94e220e084d2.jpg
 category: appetizers-and-snacks
 tags: [egg-rolls, asian, appetizer, party-food, make-ahead, freezer-friendly]
 prepTime: 20

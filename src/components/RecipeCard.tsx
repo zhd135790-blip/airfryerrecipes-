@@ -32,11 +32,8 @@ interface RecipeCardProps {
 }
 
 export default function RecipeCard({ recipe }: RecipeCardProps) {
-  // Add cache busting parameter to force image refresh
-  const baseImageUrl = recipe.mainImage || '/images/placeholder-recipe.jpg'
-  const imageUrl = baseImageUrl.includes('unsplash.com') 
-    ? `${baseImageUrl}&v=${Date.now()}` 
-    : baseImageUrl
+  // Use actual recipe image, fallback to placeholder if not available
+  const imageUrl = recipe.mainImage || '/images/placeholder-recipe.jpg'
   const totalTime = recipe.prepTime + recipe.cookTime
   
   const difficultyColors = {
@@ -56,7 +53,8 @@ export default function RecipeCard({ recipe }: RecipeCardProps) {
           alt={recipe.title}
           fill
           className="object-cover group-hover:scale-110 transition-transform duration-500"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+          quality={85}
         />
         
         {/* 渐变遮罩 */}

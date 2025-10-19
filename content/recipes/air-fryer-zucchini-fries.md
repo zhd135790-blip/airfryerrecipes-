@@ -1,7 +1,7 @@
 ---
 title: Crispy Air Fryer Zucchini Fries - Healthy Low-Carb Snack
 excerpt: Crispy air fryer zucchini fries that are healthy, low-carb, and delicious. Perfect veggie side dish or snack ready in 15 minutes!
-mainImage: https://foodyschmoodyblog.com/wp-content/uploads/2019/07/air-fryer-zucchini-fries-plate.jpg
+mainImage: /images/recipes/photo-1571091718767-18b5b1457add.jpg
 category: vegetables
 tags: [zucchini, low-carb, healthy, vegetarian, side-dish, keto-friendly]
 prepTime: 10
