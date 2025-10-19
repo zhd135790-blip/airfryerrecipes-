@@ -26,6 +26,13 @@ export const metadata: Metadata = {
     default: 'Air Fryer Recipes That Actually Work - Kitchen Tested',
     template: '%s | Best Air Fryer Recipes',
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '32x32' },
+    ],
+    apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
+  },
   description: 'Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From chicken wings to salmon and vegetables, find recipes that work for real home cooks.',
   keywords: ['air fryer recipes', 'air fryer cooking', 'crispy chicken wings', 'air fryer salmon', 'air fryer vegetables', 'healthy air fryer meals', 'air fryer chicken breast', 'air fryer french fries', 'air fryer bacon', 'air fryer cooking times'],
   authors: [{ name: siteConfig.siteName }],
