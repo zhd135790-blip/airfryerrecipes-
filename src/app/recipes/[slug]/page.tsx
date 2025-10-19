@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation'
 import { getRecipeBySlug, getAllRecipeSlugs } from '@/lib/recipes'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
+import { getFullUrl } from '@/lib/config'
 
 interface RecipePageProps {
   params: {
@@ -26,13 +27,19 @@ export async function generateMetadata({ params }: RecipePageProps): Promise<Met
 
   const imageUrl = recipe.mainImage
 
+  const recipeUrl = getFullUrl(`/recipes/${params.slug}`)
+
   return {
     title: recipe.seoTitle || recipe.title,
     description: recipe.seoDescription || recipe.excerpt,
+    alternates: {
+      canonical: recipeUrl,
+    },
     openGraph: {
       title: recipe.seoTitle || recipe.title,
       description: recipe.seoDescription || recipe.excerpt,
       type: 'article',
+      url: recipeUrl,
       images: imageUrl ? [{ url: imageUrl }] : [],
     },
     twitter: {

@@ -1,14 +1,19 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { getFullUrl } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Air Fryer Cooking Guides - Tips, Tricks & Temperature Chart',
   description: 'Complete guide to air fryer cooking. Learn how to choose, use, and maintain your air fryer with our expert tips, temperature chart, and healthy recipes.',
   keywords: ['air fryer guide', 'air fryer tips', 'air fryer temperature chart', 'how to use air fryer', 'air fryer cooking times', 'air fryer cleaning'],
+  alternates: {
+    canonical: getFullUrl('/guides'),
+  },
   openGraph: {
     title: 'Complete Air Fryer Cooking Guides & Tips',
     description: 'Master your air fryer with our comprehensive guides, temperature charts, and expert cooking tips.',
     type: 'article',
+    url: getFullUrl('/guides'),
   },
 }
 

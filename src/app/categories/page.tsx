@@ -1,10 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { getAllCategories } from '@/lib/recipes'
+import { getFullUrl } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Recipe Categories',
   description: 'Browse air fryer recipes by category. Find chicken, vegetables, desserts, appetizers, and more.',
+  alternates: {
+    canonical: getFullUrl('/categories'),
+  },
 }
 
 export default async function CategoriesPage() {

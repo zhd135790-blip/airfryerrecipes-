@@ -3,32 +3,7 @@
 import { useState, useEffect } from 'react'
 import RecipeCard from '@/components/RecipeCard'
 import Hero from '@/components/Hero'
-
-interface Recipe {
-  _id: string
-  slug: string
-  title: string
-  excerpt: string
-  mainImage: string
-  prepTime: number
-  cookTime: number
-  servings: number
-  difficulty: 'easy' | 'medium' | 'hard'
-  category: string
-  tags: string[]
-  ingredients: string[]
-  instructions: string[]
-  nutritionFacts?: {
-    calories: number
-    protein: number
-    carbs: number
-    fat: number
-  }
-  seoTitle?: string
-  seoDescription?: string
-  content?: string
-  date: string
-}
+import { Recipe } from '@/lib/recipes'
 
 export default function Home() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
@@ -137,7 +112,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {recipes.map((recipe) => (
-              <RecipeCard key={recipe._id} recipe={recipe} />
+              <RecipeCard key={recipe.slug} recipe={recipe} />
             ))}
           </div>
         </div>

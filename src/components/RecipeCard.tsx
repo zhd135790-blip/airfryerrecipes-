@@ -1,31 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-
-interface Recipe {
-  _id: string
-  slug: string
-  title: string
-  excerpt: string
-  mainImage: string
-  prepTime: number
-  cookTime: number
-  servings: number
-  difficulty: 'easy' | 'medium' | 'hard'
-  category: string
-  tags: string[]
-  ingredients: string[]
-  instructions: string[]
-  nutritionFacts?: {
-    calories: number
-    protein: number
-    carbs: number
-    fat: number
-  }
-  seoTitle?: string
-  seoDescription?: string
-  content?: string
-  date: string
-}
+import { Recipe } from '@/lib/recipes'
 
 interface RecipeCardProps {
   recipe: Recipe

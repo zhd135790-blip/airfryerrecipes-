@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { siteConfig } from '@/lib/config'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -30,7 +31,7 @@ export default function Footer() {
                 </svg>
               </div>
               <span className="text-xl font-display font-bold bg-gradient-to-r from-primary-400 to-orange-400 bg-clip-text text-transparent">
-                Air Fryer Recipes
+                {siteConfig.siteName}
               </span>
             </div>
             <p className="text-sm text-gray-400 leading-relaxed mb-6">
@@ -129,7 +130,7 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <p className="text-sm text-gray-400">
-                Email: info@airfryerrecipes.com
+                Email: {siteConfig.email}
               </p>
               <p className="text-sm text-gray-400">
                 Follow us for daily recipe inspiration
@@ -140,7 +141,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-400">
-            &copy; {currentYear} Air Fryer Recipes. All rights reserved.
+            &copy; {currentYear} {siteConfig.siteName}. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-400">
             <Link href="/terms" className="hover:text-primary-400 transition-colors">

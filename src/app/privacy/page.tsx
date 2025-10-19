@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { siteConfig } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy - Air Fryer Recipes',
-  description: 'Learn how Air Fryer Recipes collects, uses, and protects your personal information. Our commitment to your privacy and data security.',
+  title: 'Privacy Policy - Best Air Fryer Recipes',
+  description: 'Learn how Best Air Fryer Recipes collects, uses, and protects your personal information. Our commitment to your privacy and data security.',
   robots: {
     index: true,
     follow: true,
@@ -519,7 +520,7 @@ export default function PrivacyPage() {
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <h3 className="font-bold text-gray-900 mb-2">📧 Email</h3>
-                      <p className="text-gray-700">privacy@airfryerrecipes.com</p>
+                      <p className="text-gray-700">{siteConfig.privacyEmail}</p>
                     </div>
                     <div>
                       <h3 className="font-bold text-gray-900 mb-2">📝 Contact Form</h3>

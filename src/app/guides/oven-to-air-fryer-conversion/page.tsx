@@ -1,15 +1,20 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 import CalculatorTool from '@/components/CalculatorTool'
+import { getFullUrl } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Oven to Air Fryer Conversion Guide - Complete Temperature & Time Guide',
   description: 'Learn how to convert any oven recipe to air fryer settings. Complete guide with temperature and time conversion rules, examples, and our free calculator tool.',
   keywords: 'oven to air fryer conversion, air fryer temperature conversion, air fryer cooking time, recipe conversion guide, air fryer vs oven',
+  alternates: {
+    canonical: getFullUrl('/guides/oven-to-air-fryer-conversion'),
+  },
   openGraph: {
     title: 'Oven to Air Fryer Conversion Guide - Complete Temperature & Time Guide',
     description: 'Learn how to convert any oven recipe to air fryer settings with our comprehensive guide and free calculator.',
     type: 'article',
+    url: getFullUrl('/guides/oven-to-air-fryer-conversion'),
   },
 }
 

@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { getAllRecipeSlugs, getAllCategorySlugs } from '@/lib/recipes'
+import { siteConfig } from '@/lib/config'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = 'https://airfryerrecipes.com'
+  const baseUrl = siteConfig.baseUrl
 
   // Get all recipe slugs
   const recipeSlugs = getAllRecipeSlugs()

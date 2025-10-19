@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoogleAdsense from '@/components/GoogleAdsense'
+import { siteConfig } from '@/lib/config'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -19,21 +20,21 @@ const poppins = Poppins({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://airfryerrecipes.com'),
+  metadataBase: new URL(siteConfig.baseUrl),
   title: {
     default: 'Air Fryer Recipes That Actually Work - Kitchen Tested',
-    template: '%s | Air Fryer Recipes',
+    template: '%s | Best Air Fryer Recipes',
   },
   description: 'Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From chicken wings to salmon and vegetables, find recipes that work for real home cooks.',
   keywords: ['air fryer recipes', 'air fryer cooking', 'crispy chicken wings', 'air fryer salmon', 'air fryer vegetables', 'healthy air fryer meals', 'air fryer chicken breast', 'air fryer french fries', 'air fryer bacon', 'air fryer cooking times'],
-  authors: [{ name: 'Air Fryer Recipes' }],
-  creator: 'Air Fryer Recipes',
-  publisher: 'Air Fryer Recipes',
+  authors: [{ name: siteConfig.siteName }],
+  creator: siteConfig.siteName,
+  publisher: siteConfig.siteName,
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://airfryerrecipes.com',
-    siteName: 'Air Fryer Recipes',
+    url: siteConfig.baseUrl,
+    siteName: siteConfig.siteName,
     title: 'Air Fryer Recipes That Actually Work - Kitchen Tested',
     description: 'Kitchen-tested air fryer recipes that deliver crispy, flavorful results every time. From chicken wings to salmon and vegetables, find recipes that work for real home cooks.',
     images: [
