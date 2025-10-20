@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoogleAdsense from '@/components/GoogleAdsense'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import WebsiteSchema from '@/components/WebsiteSchema'
+import PerformanceMonitor from '@/components/PerformanceOptimized'
 import { siteConfig } from '@/lib/config'
 
 const inter = Inter({ 
@@ -85,9 +87,11 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <GoogleAdsense />
+        <WebsiteSchema />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">
         <GoogleAnalytics />
+        <PerformanceMonitor />
         <Header />
         <main className="flex-grow">
           {children}

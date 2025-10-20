@@ -2,10 +2,16 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { getRecipeBySlug, getAllRecipeSlugs } from '@/lib/recipes'
+import { getRecipeBySlug, getAllRecipeSlugs, Recipe } from '@/lib/recipes'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { getFullUrl } from '@/lib/config'
+import RecipeSchema from '@/components/RecipeSchema'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
+import SocialShare from '@/components/SocialShare'
+import UserInteraction from '@/components/UserInteraction'
+import ContentRecommendations from '@/components/ContentRecommendations'
+import { HeaderAd, InArticleAd, FooterAd } from '@/components/AdSenseOptimized'
 
 interface RecipePageProps {
   params: {
@@ -89,36 +95,46 @@ export default async function RecipePage({ params }: RecipePageProps) {
     } : undefined,
   }
 
+  // 面包屑数据
+  const breadcrumbs = [
+    { name: 'Home', url: '/' },
+    { name: 'Recipes', url: '/recipes' },
+    ...(recipe.category ? [{ name: recipe.category, url: `/categories/${recipe.category}` }] : []),
+    { name: recipe.title, url: `/recipes/${params.slug}` }
+  ]
+
+  // 获取相关食谱
+  const allRecipes = getAllRecipeSlugs().map(slug => getRecipeBySlug(slug)).filter((r): r is Recipe => r !== null)
+  const relatedRecipes = allRecipes
+    .filter(r => r.category === recipe.category && r.slug !== recipe.slug)
+    .slice(0, 4)
+
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {/* 结构化数据 */}
+      <RecipeSchema recipe={recipe} />
+      <BreadcrumbSchema items={breadcrumbs} />
 
       <article className="py-8">
         <div className="container max-w-4xl">
+          {/* 广告 - 页面顶部 */}
+          <HeaderAd />
+
           {/* Breadcrumbs */}
-          <nav className="text-sm mb-6">
+          <nav className="text-sm mb-6" aria-label="Breadcrumb">
             <ol className="flex items-center space-x-2 text-gray-600">
-              <li><Link href="/" className="hover:text-primary-600">Home</Link></li>
-              <li>/</li>
-              <li><Link href="/recipes" className="hover:text-primary-600">Recipes</Link></li>
-              {recipe.category && (
-                <>
-                  <li>/</li>
-                  <li>
-                    <Link 
-                      href={`/categories/${recipe.category}`}
-                      className="hover:text-primary-600"
-                    >
-                      {recipe.category}
+              {breadcrumbs.map((item, index) => (
+                <li key={index} className="flex items-center">
+                  {index > 0 && <span className="mx-2">/</span>}
+                  {index === breadcrumbs.length - 1 ? (
+                    <span className="text-gray-900 font-medium">{item.name}</span>
+                  ) : (
+                    <Link href={item.url} className="hover:text-primary-600">
+                      {item.name}
                     </Link>
-                  </li>
-                </>
-              )}
-              <li>/</li>
-              <li className="text-gray-900 font-medium">{recipe.title}</li>
+                  )}
+                </li>
+              ))}
             </ol>
           </nav>
 
@@ -249,6 +265,9 @@ export default async function RecipePage({ params }: RecipePageProps) {
                   </ol>
                 </div>
                 
+                {/* 文章内广告 */}
+                <InArticleAd />
+                
                 {/* Additional Content */}
                 {recipe.content && (
                   <div className="mt-8 prose prose-lg max-w-none">
@@ -257,10 +276,41 @@ export default async function RecipePage({ params }: RecipePageProps) {
                     </ReactMarkdown>
                   </div>
                 )}
+
+                {/* 用户互动功能 */}
+                <div className="mt-8 pt-8 border-t border-gray-200">
+                  <UserInteraction 
+                    recipeId={recipe.slug}
+                    initialRating={(recipe as any).rating || 0}
+                    initialFavorites={Math.floor(Math.random() * 100) + 20}
+                  />
+                </div>
+
+                {/* 社交分享 */}
+                <div className="mt-6">
+                  <SocialShare
+                    title={recipe.title}
+                    url={getFullUrl(`/recipes/${params.slug}`)}
+                    description={recipe.excerpt}
+                    image={recipe.mainImage}
+                  />
+                </div>
               </div>
 
+              {/* 相关食谱推荐 */}
+              {relatedRecipes.length > 0 && (
+                <div className="mt-8">
+                  <ContentRecommendations
+                    currentRecipe={recipe}
+                    relatedRecipes={relatedRecipes}
+                  />
+                </div>
+              )}
             </div>
           </div>
+
+          {/* 页面底部广告 */}
+          <FooterAd />
         </div>
       </article>
     </>

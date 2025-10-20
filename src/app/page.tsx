@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react'
 import RecipeCard from '@/components/RecipeCard'
 import Hero from '@/components/Hero'
+import { PopularRecipes } from '@/components/ContentRecommendations'
+import { HeaderAd, FooterAd } from '@/components/AdSenseOptimized'
 import { Recipe } from '@/lib/recipes'
 
 export default function Home() {
@@ -46,6 +48,9 @@ export default function Home() {
   return (
     <>
       <Hero />
+      
+      {/* 顶部广告 */}
+      <HeaderAd />
       
       <section className="py-12 bg-white">
         <div className="container">
@@ -174,6 +179,16 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* 热门食谱推荐 */}
+      <section className="py-12 bg-white">
+        <div className="container">
+          <PopularRecipes recipes={recipes} />
+        </div>
+      </section>
+
+      {/* 底部广告 */}
+      <FooterAd />
     </>
   )
 }
