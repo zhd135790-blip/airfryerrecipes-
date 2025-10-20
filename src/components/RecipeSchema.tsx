@@ -26,8 +26,8 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
         "url": "https://bestair-fryerrecipes.com/logo.png"
       }
     },
-    "datePublished": recipe.publishDate || new Date().toISOString(),
-    "dateModified": recipe.updatedAt || new Date().toISOString(),
+    "datePublished": (recipe as any).publishDate || new Date().toISOString(),
+    "dateModified": (recipe as any).updatedAt || new Date().toISOString(),
     "prepTime": `PT${recipe.prepTime}M`,
     "cookTime": `PT${recipe.cookTime}M`,
     "totalTime": `PT${(recipe.prepTime || 0) + (recipe.cookTime || 0)}M`,
@@ -41,29 +41,28 @@ export default function RecipeSchema({ recipe }: RecipeSchemaProps) {
       "image": `${process.env.NEXT_PUBLIC_SITE_URL || 'https://bestair-fryerrecipes.com'}${recipe.mainImage}`
     })) || [],
     "recipeIngredient": recipe.ingredients || [],
-    "nutrition": recipe.nutrition ? {
+    "nutrition": (recipe as any).nutrition ? {
       "@type": "NutritionInformation",
-      "calories": recipe.nutrition.calories,
-      "fatContent": recipe.nutrition.fat,
-      "saturatedFatContent": recipe.nutrition.saturatedFat,
-      "cholesterolContent": recipe.nutrition.cholesterol,
-      "sodiumContent": recipe.nutrition.sodium,
-      "carbohydrateContent": recipe.nutrition.carbs,
-      "fiberContent": recipe.nutrition.fiber,
-      "sugarContent": recipe.nutrition.sugar,
-      "proteinContent": recipe.nutrition.protein
+      "calories": (recipe as any).nutrition.calories,
+      "fatContent": (recipe as any).nutrition.fat,
+      "saturatedFatContent": (recipe as any).nutrition.saturatedFat,
+      "cholesterolContent": (recipe as any).nutrition.cholesterol,
+      "sodiumContent": (recipe as any).nutrition.sodium,
+      "carbohydrateContent": (recipe as any).nutrition.carbs,
+      "fiberContent": (recipe as any).nutrition.fiber,
+      "sugarContent": (recipe as any).nutrition.sugar,
+      "proteinContent": (recipe as any).nutrition.protein
     } : undefined,
-    "aggregateRating": recipe.rating ? {
+    "aggregateRating": (recipe as any).rating ? {
       "@type": "AggregateRating",
-      "ratingValue": recipe.rating,
-      "ratingCount": recipe.reviewCount || 1,
+      "ratingValue": (recipe as any).rating,
+      "ratingCount": (recipe as any).reviewCount || 1,
       "bestRating": 5,
       "worstRating": 1
     } : undefined,
     "keywords": recipe.tags?.join(", ") || "air fryer recipes",
-    "recipeCuisine": "American",
     "cookingMethod": "Air Frying",
-    "suitableForDiet": recipe.dietaryTags?.map(tag => `https://schema.org/${tag}Diet`) || []
+    "suitableForDiet": (recipe as any).dietaryTags?.map((tag: string) => `https://schema.org/${tag}Diet`) || []
   }
 
   return (

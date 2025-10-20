@@ -70,10 +70,10 @@ export default function ContentRecommendations({
                   <span>👥 {recipe.servings}</span>
                 </div>
                 
-                {recipe.rating && (
+                {(recipe as any).rating && (
                   <div className="flex items-center gap-1">
                     <span className="text-yellow-400">★</span>
-                    <span className="text-xs text-gray-600">{recipe.rating}</span>
+                    <span className="text-xs text-gray-600">{(recipe as any).rating}</span>
                   </div>
                 )}
               </div>
@@ -136,10 +136,10 @@ export function CategoryRecommendations({
               
               <div className="flex items-center gap-2 mt-1 text-xs text-gray-500">
                 <span>⏱️ {recipe.prepTime + recipe.cookTime}min</span>
-                {recipe.rating && (
+                {(recipe as any).rating && (
                   <span className="flex items-center gap-1">
                     <span className="text-yellow-400">★</span>
-                    {recipe.rating}
+                    {(recipe as any).rating}
                   </span>
                 )}
               </div>
@@ -154,8 +154,8 @@ export function CategoryRecommendations({
 // 热门食谱组件
 export function PopularRecipes({ recipes }: { recipes: Recipe[] }) {
   const popularRecipes = recipes
-    .filter(recipe => recipe.rating && recipe.rating >= 4.5)
-    .sort((a, b) => (b.rating || 0) - (a.rating || 0))
+    .filter(recipe => (recipe as any).rating && (recipe as any).rating >= 4.5)
+    .sort((a, b) => ((b as any).rating || 0) - ((a as any).rating || 0))
     .slice(0, 5)
 
   if (popularRecipes.length === 0) {
@@ -186,10 +186,12 @@ export function PopularRecipes({ recipes }: { recipes: Recipe[] }) {
               
               <div className="flex items-center gap-2 mt-1 text-xs text-gray-500">
                 <span>⏱️ {recipe.prepTime + recipe.cookTime}min</span>
-                <span className="flex items-center gap-1">
-                  <span className="text-yellow-400">★</span>
-                  {recipe.rating}
-                </span>
+                {(recipe as any).rating && (
+                  <span className="flex items-center gap-1">
+                    <span className="text-yellow-400">★</span>
+                    {(recipe as any).rating}
+                  </span>
+                )}
               </div>
             </div>
           </Link>
