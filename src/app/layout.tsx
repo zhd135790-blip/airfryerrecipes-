@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 import GoogleAdsense from '@/components/GoogleAdsense'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import WebsiteSchema from '@/components/WebsiteSchema'
-import PerformanceMonitor from '@/components/PerformanceOptimized'
+import { PerformanceMonitor } from '@/components/PerformanceOptimized'
 import { siteConfig } from '@/lib/config'
 
 const inter = Inter({ 
