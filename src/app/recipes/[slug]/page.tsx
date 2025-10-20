@@ -258,7 +258,7 @@ export default async function RecipePage({ params }: RecipePageProps) {
                 <div className="prose prose-lg max-w-none">
                   <ol className="space-y-6">
                     {recipe.instructions.map((instruction, index) => (
-                      <li key={index} className="text-gray-700">
+                      <li key={index} id={`step-${index + 1}`} className="text-gray-700 scroll-mt-20">
                         <span className="font-semibold text-primary-600">Step {index + 1}:</span> {instruction}
                       </li>
                     ))}
