@@ -1,7 +1,7 @@
 // 网站配置
 export const siteConfig = {
   // 网站基础 URL
-  baseUrl: 'https://bestair-fryerrecipes.com',
+  baseUrl: 'https://www.bestair-fryerrecipes.com',
   
   // 网站名称
   siteName: 'Best Air Fryer Recipes',
