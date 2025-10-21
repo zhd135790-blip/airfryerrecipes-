@@ -4,7 +4,19 @@ import path from 'path'
 import matter from 'gray-matter'
 import type { Recipe } from './recipes'
 
+// Cache for i18n recipes
+let i18nRecipesCache: { [key: string]: Recipe[] } = {}
+let i18nCacheTimestamp: number = 0
+const I18N_CACHE_DURATION = 5 * 60 * 1000 // 5 minutes
+
 export function getRecipesByLanguage(language: 'en' | 'zh'): Recipe[] {
+  const now = Date.now()
+  
+  // Return cached data if still valid
+  if (i18nRecipesCache[language] && (now - i18nCacheTimestamp) < I18N_CACHE_DURATION) {
+    return i18nRecipesCache[language]
+  }
+
   const recipesDir = language === 'zh' 
     ? path.join(process.cwd(), 'content/recipes-zh')
     : path.join(process.cwd(), 'content/recipes')
@@ -12,10 +24,16 @@ export function getRecipesByLanguage(language: 'en' | 'zh'): Recipe[] {
   // Check if language-specific directory exists
   if (!fs.existsSync(recipesDir)) {
     // Fallback to English if Chinese directory doesn't exist
-    return getRecipesFromDir(path.join(process.cwd(), 'content/recipes'))
+    const recipes = getRecipesFromDir(path.join(process.cwd(), 'content/recipes'))
+    i18nRecipesCache[language] = recipes
+    i18nCacheTimestamp = now
+    return recipes
   }
 
-  return getRecipesFromDir(recipesDir)
+  const recipes = getRecipesFromDir(recipesDir)
+  i18nRecipesCache[language] = recipes
+  i18nCacheTimestamp = now
+  return recipes
 }
 
 function getRecipesFromDir(directory: string): Recipe[] {

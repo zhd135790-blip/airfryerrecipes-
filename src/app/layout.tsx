@@ -5,6 +5,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import GoogleAdsense from '@/components/GoogleAdsense'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import WebsiteSchema from '@/components/WebsiteSchema'
+import { PerformanceMonitor } from '@/components/PerformanceOptimized'
 import { siteConfig } from '@/lib/config'
 
 const inter = Inter({ 
@@ -74,6 +76,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
   },
+  other: {
+    'google-adsense-account': 'ca-pub-9939911807253571',
+  },
 }
 
 export default function RootLayout({
@@ -85,9 +90,11 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <GoogleAdsense />
+        <WebsiteSchema />
       </head>
       <body className="min-h-screen flex flex-col bg-gray-50">
         <GoogleAnalytics />
+        <PerformanceMonitor />
         <Header />
         <main className="flex-grow">
           {children}

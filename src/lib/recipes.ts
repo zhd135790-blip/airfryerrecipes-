@@ -5,6 +5,12 @@ import matter from 'gray-matter'
 const recipesDirectory = path.join(process.cwd(), 'content/recipes')
 const categoriesDirectory = path.join(process.cwd(), 'content/categories')
 
+// Cache for recipes to avoid repeated file system reads
+let recipesCache: Recipe[] | null = null
+let categoriesCache: Category[] | null = null
+let cacheTimestamp: number = 0
+const CACHE_DURATION = 5 * 60 * 1000 // 5 minutes
+
 export interface Recipe {
   slug: string
   title: string
@@ -36,43 +42,63 @@ export interface Category {
   description: string
 }
 
-// Get all recipes
+// Get all recipes with caching
 export function getAllRecipes(): Recipe[] {
+  const now = Date.now()
+  
+  // Return cached data if still valid
+  if (recipesCache && (now - cacheTimestamp) < CACHE_DURATION) {
+    return recipesCache
+  }
+
   if (!fs.existsSync(recipesDirectory)) {
+    recipesCache = []
+    cacheTimestamp = now
     return []
   }
 
-  const fileNames = fs.readdirSync(recipesDirectory)
-  const recipes = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
-      const slug = fileName.replace(/\.md$/, '')
-      const fullPath = path.join(recipesDirectory, fileName)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data, content } = matter(fileContents)
+  try {
+    const fileNames = fs.readdirSync(recipesDirectory)
+    const recipes = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => {
+        const slug = fileName.replace(/\.md$/, '')
+        const fullPath = path.join(recipesDirectory, fileName)
+        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const { data, content } = matter(fileContents)
 
-      return {
-        slug,
-        content,
-        title: data.title,
-        excerpt: data.excerpt,
-        mainImage: data.mainImage || '/images/placeholder-recipe.jpg',
-        prepTime: data.prepTime,
-        cookTime: data.cookTime,
-        servings: data.servings,
-        difficulty: data.difficulty,
-        category: data.category,
-        tags: data.tags || [],
-        ingredients: data.ingredients || [],
-        instructions: data.instructions || [],
-        nutritionFacts: data.nutritionFacts,
-        seoTitle: data.seoTitle,
-        seoDescription: data.seoDescription,
-        date: data.date || new Date().toISOString(),
-      } as Recipe
-    })
+        return {
+          slug,
+          content,
+          title: data.title,
+          excerpt: data.excerpt,
+          mainImage: data.mainImage || '/images/placeholder-recipe.jpg',
+          prepTime: data.prepTime,
+          cookTime: data.cookTime,
+          servings: data.servings,
+          difficulty: data.difficulty,
+          category: data.category,
+          tags: data.tags || [],
+          ingredients: data.ingredients || [],
+          instructions: data.instructions || [],
+          nutritionFacts: data.nutritionFacts,
+          seoTitle: data.seoTitle,
+          seoDescription: data.seoDescription,
+          date: data.date || new Date().toISOString(),
+        } as Recipe
+      })
 
-  return recipes.sort((a, b) => (a.date > b.date ? -1 : 1))
+    const sortedRecipes = recipes.sort((a, b) => (a.date > b.date ? -1 : 1))
+    
+    // Cache the results
+    recipesCache = sortedRecipes
+    cacheTimestamp = now
+    
+    return sortedRecipes
+  } catch (error) {
+    console.error('Error loading recipes:', error)
+    return []
+  }
 }
 
 // Get recipe by slug
@@ -112,29 +138,47 @@ export function getRecipesByCategory(category: string): Recipe[] {
   return allRecipes.filter(recipe => recipe.category === category)
 }
 
-// Get all categories
+// Get all categories with caching
 export function getAllCategories(): Category[] {
+  const now = Date.now()
+  
+  // Return cached data if still valid
+  if (categoriesCache && (now - cacheTimestamp) < CACHE_DURATION) {
+    return categoriesCache
+  }
+
   if (!fs.existsSync(categoriesDirectory)) {
+    categoriesCache = []
     return []
   }
 
-  const fileNames = fs.readdirSync(categoriesDirectory)
-  const categories = fileNames
-    .filter(fileName => fileName.endsWith('.md'))
-    .map(fileName => {
-      const slug = fileName.replace(/\.md$/, '')
-      const fullPath = path.join(categoriesDirectory, fileName)
-      const fileContents = fs.readFileSync(fullPath, 'utf8')
-      const { data } = matter(fileContents)
+  try {
+    const fileNames = fs.readdirSync(categoriesDirectory)
+    const categories = fileNames
+      .filter(fileName => fileName.endsWith('.md'))
+      .map(fileName => {
+        const slug = fileName.replace(/\.md$/, '')
+        const fullPath = path.join(categoriesDirectory, fileName)
+        const fileContents = fs.readFileSync(fullPath, 'utf8')
+        const { data } = matter(fileContents)
 
-      return {
-        slug,
-        title: data.title,
-        description: data.description || '',
-      } as Category
-    })
+        return {
+          slug,
+          title: data.title,
+          description: data.description || '',
+        } as Category
+      })
 
-  return categories.sort((a, b) => a.title.localeCompare(b.title))
+    const sortedCategories = categories.sort((a, b) => a.title.localeCompare(b.title))
+    
+    // Cache the results
+    categoriesCache = sortedCategories
+    
+    return sortedCategories
+  } catch (error) {
+    console.error('Error loading categories:', error)
+    return []
+  }
 }
 
 // Get all recipe slugs (for static generation)
