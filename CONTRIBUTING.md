@@ -185,6 +185,7 @@ For new features:
 - **Discussions**: Use GitHub Discussions for questions
 - **Issues**: Create an issue for bugs or feature requests
 - **Email**: Contact MartinD at 842646990@qq.com
+- **GitHub**: https://github.com/zhd135790-blip/airfryerrecipes-
 
 ## 🎉 Recognition
 

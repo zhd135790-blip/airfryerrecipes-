@@ -34,7 +34,7 @@ A comprehensive collection of **42+ kitchen-tested air fryer recipes** with prec
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/MartinD/air-fryer-recipes.git
+   git clone https://github.com/zhd135790-blip/airfryerrecipes-.git
    cd air-fryer-recipes
    ```
 
@@ -328,8 +328,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 - 📧 **Email**: [842646990@qq.com](mailto:842646990@qq.com)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/MartinD/air-fryer-recipes/issues)
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/MartinD/air-fryer-recipes/discussions)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/zhd135790-blip/airfryerrecipes-/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/zhd135790-blip/airfryerrecipes-/discussions)
 
 ---
 
