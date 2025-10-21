@@ -7,7 +7,7 @@ export const siteConfig = {
   siteName: 'Best Air Fryer Recipes',
   
   // 联系邮箱
-  email: 'info@bestair-fryerrecipes.com',
+  email: '842646990@qq.com',
   privacyEmail: 'privacy@bestair-fryerrecipes.com',
   
   // Google Analytics
