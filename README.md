@@ -1,49 +1,67 @@
-# Air Fryer Recipes - SEO优化的内容网站
+# 🍳 Air Fryer Recipes
 
-一个专注于空气炸锅食谱的纯前端网站，使用 Next.js 14、Markdown 内容管理和 Google AdSense 变现。
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.6-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC)](https://tailwindcss.com/)
 
-## ✨ 特点
+A comprehensive collection of **42+ kitchen-tested air fryer recipes** with precise cooking times and temperatures. Built with Next.js 14, featuring SEO optimization, bilingual support, and modern UI design.
 
-- **纯前端架构**: 使用 Markdown 文件管理内容，无需数据库
-- **SEO 优化**: 内置 metadata、结构化数据(JSON-LD)、sitemap 和 robots.txt
-- **Google AdSense**: 预配置广告位，轻松变现
-- **快速性能**: Next.js 14 App Router 和服务端组件
-- **响应式设计**: 移动优先的 Tailwind CSS 设计
-- **Recipe Schema**: 结构化数据支持，Google 搜索富文本摘要
-- **图片优化**: Next.js Image 自动优化
+🌐 **Live Demo**: [https://www.bestair-fryerrecipes.com](https://www.bestair-fryerrecipes.com)
 
-## 📋 前置要求
+## ✨ Features
 
-- Node.js 18+ 和 npm
-- 一个代码编辑器
-- Google AdSense 账号（用于变现）
+- **🍳 Kitchen-Tested Recipes**: 42+ recipes tested in real air fryers
+- **📱 Responsive Design**: Mobile-first Tailwind CSS design
+- **🌍 Bilingual Support**: English and Chinese language support
+- **⚡ Fast Performance**: Next.js 14 App Router with server components
+- **🔍 SEO Optimized**: Built-in metadata, structured data, sitemap
+- **📊 Recipe Schema**: Rich snippets for Google search results
+- **🖼️ Image Optimization**: Next.js Image component optimization
+- **💰 Monetization Ready**: Google AdSense integration
+- **📝 Markdown Content**: Easy content management without database
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
-### 1. 安装依赖
+### Prerequisites
 
-```bash
-npm install
-```
+- Node.js 18+ and npm
+- A code editor
+- Google AdSense account (for monetization)
 
-### 2. 配置环境变量（可选）
+### Installation
 
-创建 `.env.local` 文件：
+1. **Clone the repository**
 
-```env
-# Google AdSense（通过审核后添加）
-NEXT_PUBLIC_GOOGLE_ADSENSE_ID=ca-pub-your-adsense-id
-```
+   ```bash
+   git clone https://github.com/MartinD/air-fryer-recipes.git
+   cd air-fryer-recipes
+   ```
 
-### 3. 启动开发服务器
+2. **Install dependencies**
 
-```bash
-npm run dev
-```
+   ```bash
+   npm install
+   ```
 
-打开 [http://localhost:3000](http://localhost:3000) 查看网站。
+3. **Configure environment variables (optional)**
 
-## 📝 内容管理
+   Create `.env.local` file:
+
+   ```env
+   # Google AdSense (add after approval)
+   NEXT_PUBLIC_GOOGLE_ADSENSE_ID=ca-pub-your-adsense-id
+   ```
+
+4. **Start development server**
+
+   ```bash
+   npm run dev
+   ```
+
+   Open [http://localhost:3000](http://localhost:3000) to view the website.
+
+## 📝 Content Management
 
 ### 目录结构
 
@@ -110,8 +128,9 @@ nutritionFacts:
 在 frontmatter 后面可以添加额外的 Markdown 内容，会显示在食谱页面底部。
 
 ### 小贴士
-- 提示1
-- 提示2
+
+- 提示 1
+- 提示 2
 ```
 
 ## 🖼️ 图片管理
@@ -134,6 +153,7 @@ mainImage: /images/recipes/chicken-wings.jpg
 ```
 
 **图片建议**:
+
 - 最小尺寸: 1200x800px
 - 格式: JPG 或 WebP
 - 文件大小: 小于 500KB
@@ -159,7 +179,7 @@ mainImage: /images/recipes/chicken-wings.jpg
 
 ### 当前广告位置
 
-- **首页**: 顶部横幅 + 每6个食谱后插入
+- **首页**: 顶部横幅 + 每 6 个食谱后插入
 - **食谱详情**: 内容顶部和底部
 - **分类页面**: 顶部横幅 + 内联广告
 
@@ -177,6 +197,7 @@ mainImage: /images/recipes/chicken-wings.jpg
 ### 更新域名
 
 部署后，在以下文件中更新域名：
+
 - `src/app/layout.tsx` - metadataBase URL
 - `src/app/sitemap.ts` - baseUrl
 - `src/app/robots.ts` - sitemap URL
@@ -195,11 +216,12 @@ mainImage: /images/recipes/chicken-wings.jpg
 - [ ] Google Analytics 设置
 - [ ] 提交 sitemap 到 Google
 
-## 📈 SEO内容策略
+## 📈 SEO 内容策略
 
 ### 关键词研究
 
 专注于长尾关键词：
+
 - "easy air fryer chicken recipes"
 - "healthy air fryer recipes for beginners"
 - "quick air fryer meals"
@@ -208,6 +230,7 @@ mainImage: /images/recipes/chicken-wings.jpg
 ### 内容计划
 
 **优先创建的分类**:
+
 - 鸡肉食谱 (Chicken)
 - 蔬菜食谱 (Vegetables)
 - 甜点 (Desserts)
@@ -215,12 +238,14 @@ mainImage: /images/recipes/chicken-wings.jpg
 - 早餐 (Breakfast)
 
 **食谱类型**:
-- 快手菜（30分钟内）
+
+- 快手菜（30 分钟内）
 - 健康选项
 - 儿童友好
 - 批量烹饪
 
 **指南文章**（在 `/guides` 创建）:
+
 - 空气炸锅购买指南
 - 温度转换对照表
 - 清洁和保养
@@ -238,16 +263,19 @@ mainImage: /images/recipes/chicken-wings.jpg
 ## 📝 内容写作技巧
 
 ### 食谱标题
+
 - 包含 "Air Fryer" + 主要食材
 - 添加描述词: Crispy, Easy, Healthy, Quick
 - 例子: "Crispy Air Fryer Chicken Wings"
 
 ### 摘要 (Excerpt)
+
 - 50-200 字符
 - 突出卖点和好处
 - 包含主关键词
 
 ### 说明 (Instructions)
+
 - 清晰的步骤编号
 - 每步一个动作
 - 包含温度和时间
@@ -257,6 +285,7 @@ mainImage: /images/recipes/chicken-wings.jpg
 ### 内容不显示
 
 确保:
+
 - Markdown 文件在 `content/recipes/` 或 `content/categories/`
 - Frontmatter 格式正确（以 `---` 开始和结束）
 - 必填字段已填写
@@ -273,12 +302,37 @@ mainImage: /images/recipes/chicken-wings.jpg
 - 确保已通过 AdSense 审核
 - 检查发布商 ID 是否正确
 
-## 📄 许可
+## 🤝 Contributing
 
-MIT License - 可自由用于个人项目！
+We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+
+### Ways to Contribute
+
+- 🍳 **Add new recipes** - Submit tested air fryer recipes
+- 🐛 **Report bugs** - Help us improve the site
+- 💡 **Suggest features** - Share your ideas
+- 📝 **Improve documentation** - Help others get started
+- 🌍 **Translate content** - Add support for more languages
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Built with [Next.js](https://nextjs.org/)
+- Styled with [Tailwind CSS](https://tailwindcss.com/)
+- Content managed with [Markdown](https://www.markdownguide.org/)
+- Icons from [Heroicons](https://heroicons.com/)
+
+## 📞 Support
+
+- 📧 **Email**: [842646990@qq.com](mailto:842646990@qq.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/MartinD/air-fryer-recipes/issues)
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/MartinD/air-fryer-recipes/discussions)
 
 ---
 
-**祝你的空气炸锅食谱网站成功！🍳**
+**Made with ❤️ for the air frying community! 🍳**
 
-需要帮助？欢迎提出问题。
+⭐ **Star this repository** if you find it helpful!

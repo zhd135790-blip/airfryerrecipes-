@@ -42,10 +42,11 @@ export default function AboutPage() {
               
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
                 Welcome to <span className="font-bold text-primary-600">Air Fryer Recipes</span>! 
-                We're passionate about sharing a wide variety of air fryer recipes to help you cook 
-                delicious, healthy, and quick meals. We believe that the air fryer is a game-changer 
-                in the kitchen, offering a fast and easy way to prepare your favorite dishes while 
-                reducing oil and preserving the natural flavors of the ingredients.
+                I'm <strong>MartinD</strong>, the creator of this platform, and I'm passionate about sharing 
+                a wide variety of air fryer recipes to help you cook delicious, healthy, and quick meals. 
+                I believe that the air fryer is a game-changer in the kitchen, offering a fast and easy 
+                way to prepare your favorite dishes while reducing oil and preserving the natural flavors 
+                of the ingredients.
               </p>
 
               <div className="my-12 p-8 bg-gradient-to-br from-primary-50 to-orange-50 rounded-2xl border border-primary-100">
@@ -69,8 +70,10 @@ export default function AboutPage() {
               </p>
 
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
-                At Air Fryer Recipes, we aim to inspire you to make the most of your air fryer and enjoy a 
-                variety of flavors in the comfort of your own home.
+                At Air Fryer Recipes, I aim to inspire you to make the most of your air fryer and enjoy a 
+                variety of flavors in the comfort of your own home. If you have any questions, suggestions, 
+                or just want to share your cooking success stories, feel free to reach out to me at 
+                <a href="mailto:842646990@qq.com" className="text-primary-600 hover:text-primary-700 font-semibold"> 842646990@qq.com</a>.
               </p>
 
               <div className="text-center py-8">
