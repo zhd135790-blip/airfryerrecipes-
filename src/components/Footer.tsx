@@ -138,6 +138,9 @@ export default function Footer() {
             <Link href="/sitemap.xml" className="hover:text-primary-400 transition-colors">
               Sitemap
             </Link>
+            <a href="https://www.pipsnyt.art/" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors">
+              Resources
+            </a>
           </div>
         </div>
       </div>
